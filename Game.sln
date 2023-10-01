@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoGame.Extensions.Hosting
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoGame.Extensions.Hosting.UnitTests", "tests\MonoGame.Extensions.Hosting.UnitTests\MonoGame.Extensions.Hosting.UnitTests.csproj", "{F2383857-ED87-4FD5-84B4-A4F328445E8D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TroublecatEditor", "src\TroublecatEditor\TroublecatEditor.csproj", "{A775F3FE-2217-4985-97B4-8DD500124497}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TroublecatPipeline", "src\TroublecatPipeline\TroublecatPipeline.csproj", "{074ACC39-EC5A-492D-BBF3-019D79F9EDE3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +41,14 @@ Global
 		{F2383857-ED87-4FD5-84B4-A4F328445E8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2383857-ED87-4FD5-84B4-A4F328445E8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2383857-ED87-4FD5-84B4-A4F328445E8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A775F3FE-2217-4985-97B4-8DD500124497}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A775F3FE-2217-4985-97B4-8DD500124497}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A775F3FE-2217-4985-97B4-8DD500124497}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A775F3FE-2217-4985-97B4-8DD500124497}.Release|Any CPU.Build.0 = Release|Any CPU
+		{074ACC39-EC5A-492D-BBF3-019D79F9EDE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{074ACC39-EC5A-492D-BBF3-019D79F9EDE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{074ACC39-EC5A-492D-BBF3-019D79F9EDE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{074ACC39-EC5A-492D-BBF3-019D79F9EDE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,5 +60,7 @@ Global
 		{9E1FB5A7-C6F7-46D6-BD7A-773808F97A5F} = {E9877B14-F4DC-4CF5-AB6B-337F38B26CD7}
 		{9F6EC672-BCD9-43BA-8F0D-C19121B66207} = {D31D53F6-973D-41B8-81FC-3738FB07FC99}
 		{F2383857-ED87-4FD5-84B4-A4F328445E8D} = {D31D53F6-973D-41B8-81FC-3738FB07FC99}
+		{A775F3FE-2217-4985-97B4-8DD500124497} = {E9877B14-F4DC-4CF5-AB6B-337F38B26CD7}
+		{074ACC39-EC5A-492D-BBF3-019D79F9EDE3} = {E9877B14-F4DC-4CF5-AB6B-337F38B26CD7}
 	EndGlobalSection
 EndGlobal
