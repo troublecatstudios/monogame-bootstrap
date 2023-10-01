@@ -2,13 +2,13 @@
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework;
 using System.Reflection;
+using System.Diagnostics;
 
 namespace MonoGame.Extensions.Hosting;
 
 // for reference, see:
 // https://andrewlock.net/introducing-ihostlifetime-and-untangling-the-generic-host-startup-interactions/
-internal sealed class GameHostService : IHostedService
-{
+internal sealed class GameHostService : IHostedService {
     // Used to stop the host service in the integration tests
     // TODO: Replace this property with a CancellationTokenSource to allow cancelling executing task from provided token. This would allow us to run the integration tests in parallel.
     // https://github.com/dotnet/extensions/issues/3218
@@ -20,8 +20,7 @@ internal sealed class GameHostService : IHostedService
     private readonly GameApplicationOptions _options;
     private readonly IHostApplicationLifetime _appLifetime;
 
-    public GameHostService(GameApplicationOptions options, GameApplication gameApplication, Game game, IHostApplicationLifetime appLifetime)
-    {
+    public GameHostService(GameApplicationOptions options, GameApplication gameApplication, Game game, IHostApplicationLifetime appLifetime) {
         _options = options ?? throw new ArgumentNullException(nameof(options));
         _gameApplication = gameApplication ?? throw new ArgumentNullException(nameof(gameApplication));
         _game = game ?? throw new ArgumentNullException(nameof(game));
@@ -45,33 +44,22 @@ internal sealed class GameHostService : IHostedService
 
     internal static ContentManager? ContentManager { get; private set; }
 
-    public Task StartAsync(CancellationToken cancellationToken)
-    {
+    internal static Thread? GameThread { get; private set; }
+
+    public Task StartAsync(CancellationToken cancellationToken) {
         _appLifetime.ApplicationStarted.Register(OnStarted);
         _appLifetime.ApplicationStopping.Register(OnStopping);
         _appLifetime.ApplicationStopped.Register(OnStopped);
 
         _game.Exiting += OnGameExiting;
 
-        return Task.CompletedTask;
-    }
-
-    private void OnGameExiting(object? sender, EventArgs e)
-    {
-        StopAsync(new CancellationToken());
-    }
-
-    public Task StopAsync(CancellationToken cancellationToken)
-    {
-        _appLifetime.StopApplication();
+        GameThread = new(RunGameInternal);
+        GameThread.Start();
 
         return Task.CompletedTask;
     }
 
-    private void OnStarted()
-    {
-        _options.OnStarted?.Invoke(_gameApplication);
-
+    private void RunGameInternal() {
         try {
             _game.Run();
         } catch {
@@ -80,13 +68,19 @@ internal sealed class GameHostService : IHostedService
         }
     }
 
-    private void OnStopping()
-    {
-        _options.OnStopping?.Invoke(_gameApplication);
+    private void OnGameExiting(object? sender, EventArgs e) => StopAsync(new CancellationToken());
+
+    public Task StopAsync(CancellationToken cancellationToken) {
+        _appLifetime.StopApplication();
+
+        return Task.CompletedTask;
     }
 
-    private void OnStopped()
-    {
-        _options.OnStopped?.Invoke(_gameApplication);
+    private void OnStarted() {
+        _options.OnStarted?.Invoke(_gameApplication);
     }
+
+    private void OnStopping() => _options.OnStopping?.Invoke(_gameApplication);
+
+    private void OnStopped() => _options.OnStopped?.Invoke(_gameApplication);
 }
