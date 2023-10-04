@@ -3,7 +3,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using SkiaSharp;
 using Troublecat.Assets;
-using Troublecat.Assets.Fonts;
+using Troublecat.Core.Assets.Fonts;
 using Troublecat.Core.Diagnostics;
 using Troublecat.Core.Geometry;
 using Troublecat.Data.Serialization;

@@ -8,7 +8,7 @@ using Troublecat.Data;
 using Troublecat.Data.Serialization;
 
 using var host = Host.CreateDefaultBuilder(args)
-    .ConfigureAppConfiguration((cfg) => cfg.AddJsonFile("pipeline.json"))
+    .ConfigureAppConfiguration((cfg) => cfg.AddJsonFile("troublecat.json"))
     .ConfigureLogging((context, cfg) => {
         cfg.ClearProviders();
         var logger = new LoggerConfiguration()

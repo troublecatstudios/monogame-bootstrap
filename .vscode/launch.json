@@ -9,7 +9,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/src/TroublecatGame/bin/Debug/net7.0/TroublecatGame.dll",
+            "program": "${workspaceFolder}/src/GameBootstrap/bin/Debug/net7.0/GameBootstrap.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
             "console": "internalConsole",

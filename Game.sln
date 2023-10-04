@@ -5,19 +5,13 @@ VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E9877B14-F4DC-4CF5-AB6B-337F38B26CD7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TroublecatGame", "src\TroublecatGame\TroublecatGame.csproj", "{8E59B3A1-8058-4150-9977-650746685D66}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Troublecat", "src\Troublecat\Troublecat.csproj", "{8E59B3A1-8058-4150-9977-650746685D66}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoGame.Extensions.Hosting", "src\MonoGame.Extensions.Hosting\MonoGame.Extensions.Hosting.csproj", "{9E1FB5A7-C6F7-46D6-BD7A-773808F97A5F}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{D31D53F6-973D-41B8-81FC-3738FB07FC99}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoGame.Extensions.Hosting.IntegrationTests", "tests\MonoGame.Extensions.Hosting.IntegrationTests\MonoGame.Extensions.Hosting.IntegrationTests.csproj", "{9F6EC672-BCD9-43BA-8F0D-C19121B66207}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoGame.Extensions.Hosting.UnitTests", "tests\MonoGame.Extensions.Hosting.UnitTests\MonoGame.Extensions.Hosting.UnitTests.csproj", "{F2383857-ED87-4FD5-84B4-A4F328445E8D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TroublecatEditor", "src\TroublecatEditor\TroublecatEditor.csproj", "{A775F3FE-2217-4985-97B4-8DD500124497}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Troublecat.Editor", "src\Troublecat.Editor\Troublecat.Editor.csproj", "{A775F3FE-2217-4985-97B4-8DD500124497}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TroublecatPipeline", "src\TroublecatPipeline\TroublecatPipeline.csproj", "{074ACC39-EC5A-492D-BBF3-019D79F9EDE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game", "src\GameBootstrap\GameBootstrap.csproj", "{0BBD33A8-D440-4453-BE02-1BC4350E7607}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,18 +23,6 @@ Global
 		{8E59B3A1-8058-4150-9977-650746685D66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E59B3A1-8058-4150-9977-650746685D66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E59B3A1-8058-4150-9977-650746685D66}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9E1FB5A7-C6F7-46D6-BD7A-773808F97A5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9E1FB5A7-C6F7-46D6-BD7A-773808F97A5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9E1FB5A7-C6F7-46D6-BD7A-773808F97A5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9E1FB5A7-C6F7-46D6-BD7A-773808F97A5F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9F6EC672-BCD9-43BA-8F0D-C19121B66207}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9F6EC672-BCD9-43BA-8F0D-C19121B66207}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9F6EC672-BCD9-43BA-8F0D-C19121B66207}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9F6EC672-BCD9-43BA-8F0D-C19121B66207}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F2383857-ED87-4FD5-84B4-A4F328445E8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F2383857-ED87-4FD5-84B4-A4F328445E8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F2383857-ED87-4FD5-84B4-A4F328445E8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F2383857-ED87-4FD5-84B4-A4F328445E8D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A775F3FE-2217-4985-97B4-8DD500124497}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A775F3FE-2217-4985-97B4-8DD500124497}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A775F3FE-2217-4985-97B4-8DD500124497}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -49,6 +31,10 @@ Global
 		{074ACC39-EC5A-492D-BBF3-019D79F9EDE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{074ACC39-EC5A-492D-BBF3-019D79F9EDE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{074ACC39-EC5A-492D-BBF3-019D79F9EDE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BBD33A8-D440-4453-BE02-1BC4350E7607}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BBD33A8-D440-4453-BE02-1BC4350E7607}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BBD33A8-D440-4453-BE02-1BC4350E7607}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BBD33A8-D440-4453-BE02-1BC4350E7607}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,10 +43,8 @@ Global
 		SolutionGuid = {7445A598-5BDE-4A56-BF20-82BD5680B8B7}
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{9E1FB5A7-C6F7-46D6-BD7A-773808F97A5F} = {E9877B14-F4DC-4CF5-AB6B-337F38B26CD7}
-		{9F6EC672-BCD9-43BA-8F0D-C19121B66207} = {D31D53F6-973D-41B8-81FC-3738FB07FC99}
-		{F2383857-ED87-4FD5-84B4-A4F328445E8D} = {D31D53F6-973D-41B8-81FC-3738FB07FC99}
 		{A775F3FE-2217-4985-97B4-8DD500124497} = {E9877B14-F4DC-4CF5-AB6B-337F38B26CD7}
 		{074ACC39-EC5A-492D-BBF3-019D79F9EDE3} = {E9877B14-F4DC-4CF5-AB6B-337F38B26CD7}
+		{0BBD33A8-D440-4453-BE02-1BC4350E7607} = {E9877B14-F4DC-4CF5-AB6B-337F38B26CD7}
 	EndGlobalSection
 EndGlobal
