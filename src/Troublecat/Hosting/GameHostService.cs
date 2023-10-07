@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework;
 using System.Reflection;
 using System.Diagnostics;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace Troublecat.Hosting;
 
@@ -15,21 +16,21 @@ internal sealed class GameHostService : IHostedService {
     // https://github.com/dotnet/runtime/blob/main/src/libraries/Microsoft.Extensions.Hosting.Abstractions/src/BackgroundService.cs
     internal static IHostedService? HostService { get; private set; }
 
-    private readonly Game _game;
+    private readonly TroublecatGame _game;
     private readonly IHostApplicationLifetime _appLifetime;
 
-    public GameHostService(Game game, IHostApplicationLifetime appLifetime) {
+    public GameHostService(TroublecatGame game, IHostApplicationLifetime appLifetime) {
         _game = game ?? throw new ArgumentNullException(nameof(game));
         _appLifetime = appLifetime ?? throw new ArgumentNullException(nameof(appLifetime));
 
-        var graphicsDeviceManagerProperty = game
-            .GetType()
-            .GetProperty("graphicsDeviceManager", BindingFlags.Instance | BindingFlags.NonPublic);
+        var graphicsManager = new GraphicsDeviceManager(game);
+        if (game.Services.GetService<IGraphicsDeviceService>() is not null) {
+            game.Services.RemoveService(typeof(IGraphicsDeviceService));
+        }
+        game.Services.AddService<IGraphicsDeviceService>(graphicsManager);
+        Graphics = graphicsManager;
 
-        var graphicsDeviceManagerValue = graphicsDeviceManagerProperty!.GetValue(game) as GraphicsDeviceManager;
-
-        // If the GraphicsDeviceManager was not instantiated in the Game contructor, create it now.
-        Graphics = graphicsDeviceManagerValue ?? new GraphicsDeviceManager(game);
+        ((IGraphicsDeviceManager)graphicsManager).CreateDevice();
 
         ContentManager = game.Content;
 
@@ -49,19 +50,19 @@ internal sealed class GameHostService : IHostedService {
 
         _game.Exiting += OnGameExiting;
 
-        GameThread = new(RunGameInternal);
-        GameThread.Start();
+        _ = RunGameInternalAsync();
 
         return Task.CompletedTask;
     }
 
-    private void RunGameInternal() {
+    private Task RunGameInternalAsync() {
         try {
             _game.Run();
         } catch {
             _appLifetime.StopApplication();
             throw;
         }
+        return Task.CompletedTask;
     }
 
     private void OnGameExiting(object? sender, EventArgs e) => StopAsync(new CancellationToken());
