@@ -12,9 +12,11 @@ public class TroublecatGame : Microsoft.Xna.Framework.Game {
     private IDataLoader? _dataLoader;
 
     private SpriteBatch _spriteBatch;
-    Vector2 baseScreenSize = new Vector2(800, 480);
+    protected Vector2 BaseScreenSize = new Vector2(320, 180);
+    protected Vector3 ScreenScaling = Vector3.One;
     private Matrix globalTransformation;
     int backbufferWidth, backbufferHeight;
+    private bool _allContentDoneLoading;
 
     public TroublecatGame(ILogger<TroublecatGame> logger, IServiceProvider serviceProvider) {
         _logger = logger;
@@ -32,11 +34,23 @@ public class TroublecatGame : Microsoft.Xna.Framework.Game {
         }
     }
 
+    protected IServiceProvider ServiceProvider => _serviceProvider;
+
     protected override void LoadContent()
     {
         _logger.LogInformation($"Loading content...");
         Loader.LoadContent();
+        Loader.OnAfterAllContentLoaded += InternalOnAfterAllContentLoaded;
         _spriteBatch = new SpriteBatch(GraphicsDevice);
+    }
+
+    protected virtual void OnAfterAllContentLoaded() {
+
+    }
+
+    protected virtual void InternalOnAfterAllContentLoaded() {
+        OnAfterAllContentLoaded();
+        _allContentDoneLoading = true;
     }
 
     public void ScalePresentationArea()
@@ -44,10 +58,10 @@ public class TroublecatGame : Microsoft.Xna.Framework.Game {
         //Work out how much we need to scale our graphics to fill the screen
         backbufferWidth = GraphicsDevice.PresentationParameters.BackBufferWidth;
         backbufferHeight = GraphicsDevice.PresentationParameters.BackBufferHeight;
-        float horScaling = backbufferWidth / baseScreenSize.X;
-        float verScaling = backbufferHeight / baseScreenSize.Y;
-        Vector3 screenScalingFactor = new Vector3(horScaling, verScaling, 1);
-        globalTransformation = Matrix.CreateScale(screenScalingFactor);
+        float horScaling = backbufferWidth / BaseScreenSize.X;
+        float verScaling = backbufferHeight / BaseScreenSize.Y;
+        ScreenScaling = new Vector3(horScaling, verScaling, 1);
+        globalTransformation = Matrix.CreateScale(ScreenScaling);
         System.Diagnostics.Debug.WriteLine("Screen Size - Width[" + GraphicsDevice.PresentationParameters.BackBufferWidth + "] Height [" + GraphicsDevice.PresentationParameters.BackBufferHeight + "]");
     }
 
@@ -62,8 +76,23 @@ public class TroublecatGame : Microsoft.Xna.Framework.Game {
 
     protected override void Draw(GameTime gameTime) {
         GraphicsDevice.Clear(Color.CornflowerBlue);
-        _spriteBatch.Begin(SpriteSortMode.Immediate, null, null, null, null,null, globalTransformation);
+        _spriteBatch.Begin(SpriteSortMode.Immediate, null, SamplerState.PointClamp, null, null,null, globalTransformation);
         base.Draw(gameTime);
+
+        if (!_allContentDoneLoading) {
+            DrawLoading(_spriteBatch);
+        } else {
+            DrawSprites(_spriteBatch);
+        }
+
         _spriteBatch.End();
+    }
+
+    protected virtual void DrawLoading(SpriteBatch batch) {
+
+    }
+
+    protected virtual void DrawSprites(SpriteBatch batch) {
+
     }
 }

@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using System.Text;
 
 namespace Troublecat.IO;
 
@@ -25,5 +26,13 @@ public static class Files {
         }
 
         await File.WriteAllTextAsync(fullpath, content);
+    }
+
+    public static string ReadText(string filePath, Encoding? encoding = null) {
+        encoding ??= Encoding.UTF8;
+        if (!Paths.Exists(filePath)) {
+            throw new FileNotFoundException($"Unable to find the file '{filePath}'!");
+        }
+        return File.ReadAllText(filePath, encoding);
     }
 }

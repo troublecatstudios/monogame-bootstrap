@@ -1,11 +1,10 @@
 using System.Collections.Immutable;
+using Troublecat.Core.Assets;
 using Troublecat.Core.Assets.Fonts;
 
 namespace Troublecat.Assets;
 
-public class FontAsset
-{
-    public string Name = string.Empty;
+public class FontAsset : GameAsset {
     public string TexturePath = string.Empty;
     public int LineHeight = 0;
     public float Baseline;
@@ -13,8 +12,7 @@ public class FontAsset
 
     public readonly ImmutableArray<Kerning> Kernings = ImmutableArray<Kerning>.Empty;
 
-    public FontAsset(Dictionary<int, PixelFontCharacter> characters, ImmutableArray<Kerning> kernings, int size, string texturePath, float baseline)
-    {
+    public FontAsset(Dictionary<int, PixelFontCharacter> characters, ImmutableArray<Kerning> kernings, int size, string texturePath, float baseline) {
         Name = Path.GetFileNameWithoutExtension(texturePath);
         LineHeight = size;
         Baseline = baseline;
@@ -24,7 +22,6 @@ public class FontAsset
         Kernings = kernings;
     }
 
-    public FontAsset()
-    {
+    public FontAsset() {
     }
 }

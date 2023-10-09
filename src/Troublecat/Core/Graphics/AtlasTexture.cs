@@ -26,7 +26,7 @@ public class AtlasTexture : IDisposable
     private readonly ILogger<AtlasTexture> _logger;
     [JsonIgnore]
     private Texture2D[] _textures = null!;
-    internal Texture2D[] Textures
+    public Texture2D[] Textures
     {
         get
         {

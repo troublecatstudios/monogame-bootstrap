@@ -48,6 +48,13 @@ public static class Paths {
         return Directory.GetDirectories(path);
     }
 
+    public static string GetPathWithoutExtension(string path) {
+        if (Path.HasExtension(path)) {
+            return path.Substring(0, path.Length - Path.GetExtension(path).Length);
+        }
+        return path;
+    }
+
     public static IEnumerable<FileInfo> GetAllFilesInFolder(string path, string filter, bool recursive) {
         if (!Directory.Exists(path)) {
             return Enumerable.Empty<FileInfo>();
