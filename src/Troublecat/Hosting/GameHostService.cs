@@ -44,25 +44,28 @@ internal sealed class GameHostService : IHostedService {
     internal static Thread? GameThread { get; private set; }
 
     public Task StartAsync(CancellationToken cancellationToken) {
-        // _appLifetime.ApplicationStarted.Register(OnStarted);
-        // _appLifetime.ApplicationStopping.Register(OnStopping);
-        // _appLifetime.ApplicationStopped.Register(OnStopped);
-
+        _appLifetime.ApplicationStarted.Register(OnStarted);
+        _appLifetime.ApplicationStopping.Register(OnStopping);
+        _appLifetime.ApplicationStopped.Register(OnStopped);
         _game.Exiting += OnGameExiting;
-
-        _ = RunGameInternalAsync();
-
         return Task.CompletedTask;
     }
 
-    private Task RunGameInternalAsync() {
+    private void OnStopped() {
+
+    }
+
+    private void OnStopping() {
+
+    }
+
+    private void OnStarted() {
         try {
             _game.Run();
         } catch {
             _appLifetime.StopApplication();
             throw;
         }
-        return Task.CompletedTask;
     }
 
     private void OnGameExiting(object? sender, EventArgs e) => StopAsync(new CancellationToken());

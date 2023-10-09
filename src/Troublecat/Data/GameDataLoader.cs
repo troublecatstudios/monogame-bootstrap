@@ -10,6 +10,7 @@ using Troublecat.Assets;
 using Troublecat.Configuration;
 using Troublecat.Core;
 using Troublecat.Core.Assets.Fonts;
+using Troublecat.Core.Graphics;
 using Troublecat.Data.Serialization;
 using Troublecat.IO;
 using Troublecat.IO.Extensions;
@@ -63,13 +64,14 @@ public class GameDataLoader : IDataLoader {
         if (typeof(T) == typeof(Texture2D)) {
             return FetchTexture(path) as T;
         }
+        if (typeof(T) == typeof(InternalTexture)) {
+            return new InternalTexture(path) as T;
+        }
         return default;
     }
 
-    public Texture2D FetchTexture(string path)
-    {
-        if (CachedUniqueTextures.ContainsKey(path))
-        {
+    private Texture2D FetchTexture(string path) {
+        if (CachedUniqueTextures.ContainsKey(path)) {
             return CachedUniqueTextures[path];
         }
 
@@ -237,21 +239,17 @@ public class GameDataLoader : IDataLoader {
     // Remarks:
     //     Note that different image decoders may generate slight differences between platforms,
     //     but perceptually the images should be identical.
-    private static Texture2D GetTextureFromFile(GraphicsDevice graphicsDevice, string path, bool premultiplyAlpha)
-    {
-        if (path == null)
-        {
+    private static Texture2D GetTextureFromFile(GraphicsDevice graphicsDevice, string path, bool premultiplyAlpha) {
+        if (path == null) {
             throw new ArgumentNullException("path");
         }
         var texture = Texture2D.FromFile(graphicsDevice, path);
 
-        if (premultiplyAlpha)
-        {
-            var data = new Color[texture.Width * texture.Height];
+        if (premultiplyAlpha) {
+            var data = new Microsoft.Xna.Framework.Color[texture.Width * texture.Height];
             texture.GetData(data);
 
-            for (int i = 0; i < data.Length; i++)
-            {
+            for (int i = 0; i < data.Length; i++) {
                 data[i] = data[i].MultiplyAlpha();
             }
         }
