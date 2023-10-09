@@ -73,7 +73,7 @@ public class GameDataLoader : IDataLoader {
             return CachedUniqueTextures[path];
         }
 
-        var texture = GetTextureFromFile(_graphicsDevice, Path.Join(_config.ResourcesPackDirectory, $"{path.EscapePath()}.png"), true);
+        var texture = GetTextureFromFile(_graphicsDevice, Path.Join(_config.ResourcesPackDirectoryAbsolute, $"{path.EscapePath()}.png"), true);
         texture.Name = path;
         CachedUniqueTextures[path] = texture;
 
