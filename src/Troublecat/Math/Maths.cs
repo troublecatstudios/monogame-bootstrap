@@ -4,6 +4,8 @@ public partial class Maths {
 
     public const float Deg2Rad = (MathF.PI * 2) / 360;
 
+    public static float Floor(float f) => (float)System.Math.Floor(f);
+
     public static int FloorToInt(float v) => (int)MathF.Floor(v);
 
     public static int CeilToInt(float v) => (int)MathF.Ceiling(v);

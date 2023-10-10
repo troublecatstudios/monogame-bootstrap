@@ -38,6 +38,8 @@ public class GameScene {
 
     public Vector2 BaseScreenSize { get; set; }
 
+    public Vector2 CenterScreen => (BaseScreenSize/2);
+
     public void ConfigureServices(IServiceProvider services) {
         _dataLoader = services.GetRequiredService<IDataLoader>();
         _atlasTextureFactory = services.GetRequiredService<IAtlasTextureFactory>();

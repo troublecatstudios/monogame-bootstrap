@@ -45,4 +45,8 @@ public static class Randoms {
         var direction = end < start ? -1 : 1;
         return start + ((mod * delta) * direction);
     }
+
+    public static int CoinFlip() {
+        return InRange(0, 100) > 50 ? 1 : -1;
+    }
 }
