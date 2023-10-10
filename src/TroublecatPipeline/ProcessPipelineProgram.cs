@@ -22,10 +22,10 @@ internal class ProcessPipelineProgram {
         var work = new List<Task>();
         foreach(var importer in _importers) {
             var attr = importer.GetType().GetCustomAttribute<ResourceImporterAttribute>();
-            _logger.LogInformation($"{importer.GetType()} {{filters}}", attr!.Filters);
+            _logger.LogInformation($"{importer.GetType()} {{filters}}", String.Join(',', attr!.Filters));
             var absolutePath = _configuration.ResourcesBuildDirectoryAbsolute;
-            var filter = String.Join(',', attr.Filters);
-            foreach(var file in Paths.GetAllFilesInFolder(absolutePath, filter, recursive: true)) {
+            foreach(var file in Paths.GetAllFilesInFolder(absolutePath, true, attr!.Filters)) {
+                _logger.LogInformation($"Found: {{asset}}", file.Name);
                 work.Add(importer.ImportAsync(file.FullName));
             }
         }

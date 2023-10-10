@@ -30,11 +30,11 @@
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
         "X": 1.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 8.0
+        "Width": 4.0,
+        "Height": 10.0
       },
-      "XOffset": 1,
-      "YOffset": -8,
+      "XOffset": 0,
+      "YOffset": -9,
       "XAdvance": 5,
       "Page": 0,
       "Kerning": {
@@ -46,13 +46,13 @@
       "Character": 34,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 4.0,
+        "X": 6.0,
         "Y": 0.0,
-        "Width": 8.0,
-        "Height": 7.0
+        "Width": 10.0,
+        "Height": 9.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 9,
       "Page": 0,
       "Kerning": {
@@ -64,13 +64,13 @@
       "Character": 35,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 13.0,
+        "X": 17.0,
         "Y": 0.0,
-        "Width": 8.0,
-        "Height": 8.0
+        "Width": 10.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 9,
       "Page": 0,
       "Kerning": {
@@ -82,13 +82,13 @@
       "Character": 36,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 22.0,
+        "X": 28.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 10.0
+        "Width": 7.0,
+        "Height": 12.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -100,13 +100,13 @@
       "Character": 37,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 28.0,
+        "X": 36.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 8.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -118,13 +118,13 @@
       "Character": 38,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 34.0,
+        "X": 44.0,
         "Y": 0.0,
-        "Width": 8.0,
-        "Height": 8.0
+        "Width": 10.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 9,
       "Page": 0,
       "Kerning": {
@@ -136,13 +136,13 @@
       "Character": 39,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 43.0,
+        "X": 55.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 5.0
+        "Width": 4.0,
+        "Height": 7.0
       },
-      "XOffset": 1,
-      "YOffset": -8,
+      "XOffset": 0,
+      "YOffset": -9,
       "XAdvance": 5,
       "Page": 0,
       "Kerning": {
@@ -154,13 +154,13 @@
       "Character": 40,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 46.0,
+        "X": 60.0,
         "Y": 0.0,
-        "Width": 3.0,
-        "Height": 8.0
+        "Width": 5.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 5,
       "Page": 0,
       "Kerning": {
@@ -172,13 +172,13 @@
       "Character": 41,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 50.0,
+        "X": 66.0,
         "Y": 0.0,
-        "Width": 3.0,
-        "Height": 8.0
+        "Width": 5.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 5,
       "Page": 0,
       "Kerning": {
@@ -190,13 +190,13 @@
       "Character": 42,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 54.0,
+        "X": 72.0,
         "Y": 0.0,
-        "Width": 6.0,
-        "Height": 8.0
+        "Width": 8.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 8,
       "Page": 0,
       "Kerning": {
@@ -208,13 +208,13 @@
       "Character": 43,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 61.0,
+        "X": 81.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 5.0
+        "Width": 7.0,
+        "Height": 7.0
       },
-      "XOffset": 0,
-      "YOffset": -6,
+      "XOffset": -1,
+      "YOffset": -7,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -226,13 +226,13 @@
       "Character": 44,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 67.0,
+        "X": 89.0,
         "Y": 0.0,
-        "Width": 3.0,
-        "Height": 5.0
+        "Width": 5.0,
+        "Height": 7.0
       },
-      "XOffset": 0,
-      "YOffset": -3,
+      "XOffset": -1,
+      "YOffset": -4,
       "XAdvance": 5,
       "Page": 0,
       "Kerning": {
@@ -244,13 +244,13 @@
       "Character": 45,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 71.0,
+        "X": 95.0,
         "Y": 0.0,
-        "Width": 6.0,
-        "Height": 2.0
+        "Width": 8.0,
+        "Height": 4.0
       },
-      "XOffset": 0,
-      "YOffset": -5,
+      "XOffset": -1,
+      "YOffset": -6,
       "XAdvance": 8,
       "Page": 0,
       "Kerning": {
@@ -262,13 +262,13 @@
       "Character": 46,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 78.0,
+        "X": 104.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 2.0
+        "Width": 4.0,
+        "Height": 4.0
       },
-      "XOffset": 0,
-      "YOffset": -2,
+      "XOffset": -1,
+      "YOffset": -3,
       "XAdvance": 3,
       "Page": 0,
       "Kerning": {
@@ -280,13 +280,13 @@
       "Character": 47,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 81.0,
+        "X": 109.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 8.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -298,13 +298,13 @@
       "Character": 48,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 87.0,
+        "X": 117.0,
         "Y": 0.0,
-        "Width": 6.0,
-        "Height": 8.0
+        "Width": 8.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 8,
       "Page": 0,
       "Kerning": {
@@ -316,13 +316,13 @@
       "Character": 49,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 94.0,
+        "X": 126.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 8.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -334,13 +334,13 @@
       "Character": 50,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 100.0,
+        "X": 134.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 8.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -352,13 +352,13 @@
       "Character": 51,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 106.0,
+        "X": 142.0,
         "Y": 0.0,
-        "Width": 3.0,
-        "Height": 8.0
+        "Width": 5.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 5,
       "Page": 0,
       "Kerning": {
@@ -370,13 +370,13 @@
       "Character": 52,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 110.0,
+        "X": 148.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 8.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -388,13 +388,13 @@
       "Character": 53,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 116.0,
+        "X": 156.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 8.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -406,13 +406,13 @@
       "Character": 54,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 122.0,
+        "X": 164.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 8.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -424,13 +424,13 @@
       "Character": 55,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 128.0,
+        "X": 172.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 8.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -442,13 +442,13 @@
       "Character": 56,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 134.0,
+        "X": 180.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 8.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -460,13 +460,13 @@
       "Character": 57,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 140.0,
+        "X": 188.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 8.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -478,13 +478,13 @@
       "Character": 58,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 146.0,
+        "X": 196.0,
         "Y": 0.0,
-        "Width": 3.0,
-        "Height": 8.0
+        "Width": 5.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 5,
       "Page": 0,
       "Kerning": {
@@ -496,13 +496,13 @@
       "Character": 59,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 150.0,
+        "X": 202.0,
         "Y": 0.0,
-        "Width": 3.0,
-        "Height": 10.0
+        "Width": 5.0,
+        "Height": 12.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 5,
       "Page": 0,
       "Kerning": {
@@ -514,13 +514,13 @@
       "Character": 60,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 154.0,
+        "X": 208.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 8.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -532,13 +532,13 @@
       "Character": 61,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 160.0,
+        "X": 216.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 5.0
+        "Width": 7.0,
+        "Height": 7.0
       },
-      "XOffset": 0,
-      "YOffset": -6,
+      "XOffset": -1,
+      "YOffset": -7,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -550,13 +550,13 @@
       "Character": 62,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 166.0,
+        "X": 224.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 8.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -568,13 +568,13 @@
       "Character": 63,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 172.0,
+        "X": 232.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 8.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -586,13 +586,13 @@
       "Character": 64,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 178.0,
+        "X": 240.0,
         "Y": 0.0,
-        "Width": 6.0,
-        "Height": 8.0
+        "Width": 8.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 8,
       "Page": 0,
       "Kerning": {
@@ -604,13 +604,13 @@
       "Character": 65,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 185.0,
+        "X": 249.0,
         "Y": 0.0,
-        "Width": 6.0,
-        "Height": 8.0
+        "Width": 8.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 8,
       "Page": 0,
       "Kerning": {
@@ -622,13 +622,13 @@
       "Character": 66,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 192.0,
+        "X": 258.0,
         "Y": 0.0,
-        "Width": 6.0,
-        "Height": 8.0
+        "Width": 8.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 8,
       "Page": 0,
       "Kerning": {
@@ -640,13 +640,13 @@
       "Character": 67,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 199.0,
+        "X": 267.0,
         "Y": 0.0,
-        "Width": 3.0,
-        "Height": 8.0
+        "Width": 5.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 5,
       "Page": 0,
       "Kerning": {
@@ -658,13 +658,13 @@
       "Character": 68,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 203.0,
+        "X": 273.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 8.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -676,13 +676,13 @@
       "Character": 69,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 209.0,
+        "X": 281.0,
         "Y": 0.0,
-        "Width": 3.0,
-        "Height": 8.0
+        "Width": 5.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 5,
       "Page": 0,
       "Kerning": {
@@ -694,13 +694,13 @@
       "Character": 70,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 213.0,
+        "X": 287.0,
         "Y": 0.0,
-        "Width": 3.0,
-        "Height": 8.0
+        "Width": 5.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 5,
       "Page": 0,
       "Kerning": {
@@ -712,13 +712,13 @@
       "Character": 71,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 217.0,
+        "X": 293.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 8.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -730,13 +730,13 @@
       "Character": 72,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 223.0,
+        "X": 301.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 8.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -748,13 +748,13 @@
       "Character": 73,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 229.0,
+        "X": 309.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 8.0
+        "Width": 4.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 3,
       "Page": 0,
       "Kerning": {
@@ -766,13 +766,13 @@
       "Character": 74,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 232.0,
+        "X": 314.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 8.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -784,13 +784,13 @@
       "Character": 75,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 238.0,
+        "X": 322.0,
         "Y": 0.0,
-        "Width": 6.0,
-        "Height": 8.0
+        "Width": 8.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 8,
       "Page": 0,
       "Kerning": {
@@ -802,13 +802,13 @@
       "Character": 76,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 245.0,
+        "X": 331.0,
         "Y": 0.0,
-        "Width": 3.0,
-        "Height": 8.0
+        "Width": 5.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 5,
       "Page": 0,
       "Kerning": {
@@ -820,13 +820,13 @@
       "Character": 77,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 249.0,
+        "X": 337.0,
         "Y": 0.0,
-        "Width": 8.0,
-        "Height": 8.0
+        "Width": 10.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 9,
       "Page": 0,
       "Kerning": {
@@ -838,13 +838,13 @@
       "Character": 78,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 258.0,
+        "X": 348.0,
         "Y": 0.0,
-        "Width": 6.0,
-        "Height": 8.0
+        "Width": 8.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 8,
       "Page": 0,
       "Kerning": {
@@ -856,13 +856,13 @@
       "Character": 79,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 265.0,
+        "X": 357.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 8.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -874,13 +874,13 @@
       "Character": 80,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 271.0,
+        "X": 365.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 8.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -892,13 +892,13 @@
       "Character": 81,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 277.0,
+        "X": 373.0,
         "Y": 0.0,
-        "Width": 6.0,
-        "Height": 8.0
+        "Width": 8.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 8,
       "Page": 0,
       "Kerning": {
@@ -910,13 +910,13 @@
       "Character": 82,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 284.0,
+        "X": 382.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 8.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -928,13 +928,13 @@
       "Character": 83,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 290.0,
+        "X": 390.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 8.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -946,13 +946,13 @@
       "Character": 84,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 296.0,
+        "X": 398.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 8.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -964,13 +964,13 @@
       "Character": 85,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 302.0,
+        "X": 406.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 8.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -982,13 +982,13 @@
       "Character": 86,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 308.0,
+        "X": 414.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 8.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -1000,13 +1000,13 @@
       "Character": 87,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 314.0,
+        "X": 422.0,
         "Y": 0.0,
-        "Width": 8.0,
-        "Height": 8.0
+        "Width": 10.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 9,
       "Page": 0,
       "Kerning": {
@@ -1018,13 +1018,13 @@
       "Character": 88,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 323.0,
+        "X": 433.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 8.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -1036,13 +1036,13 @@
       "Character": 89,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 329.0,
+        "X": 441.0,
         "Y": 0.0,
-        "Width": 6.0,
-        "Height": 8.0
+        "Width": 8.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 8,
       "Page": 0,
       "Kerning": {
@@ -1054,13 +1054,13 @@
       "Character": 90,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 336.0,
+        "X": 450.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 8.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -1072,13 +1072,13 @@
       "Character": 91,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 342.0,
+        "X": 458.0,
         "Y": 0.0,
-        "Width": 3.0,
-        "Height": 8.0
+        "Width": 5.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 5,
       "Page": 0,
       "Kerning": {
@@ -1090,13 +1090,13 @@
       "Character": 92,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 346.0,
+        "X": 464.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 8.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -1108,13 +1108,13 @@
       "Character": 93,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 352.0,
+        "X": 472.0,
         "Y": 0.0,
-        "Width": 3.0,
-        "Height": 8.0
+        "Width": 5.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 5,
       "Page": 0,
       "Kerning": {
@@ -1126,13 +1126,13 @@
       "Character": 94,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 356.0,
+        "X": 478.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 5.0
+        "Width": 7.0,
+        "Height": 7.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -1144,13 +1144,13 @@
       "Character": 95,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 362.0,
+        "X": 486.0,
         "Y": 0.0,
-        "Width": 6.0,
-        "Height": 2.0
+        "Width": 8.0,
+        "Height": 4.0
       },
-      "XOffset": 0,
-      "YOffset": -2,
+      "XOffset": -1,
+      "YOffset": -3,
       "XAdvance": 8,
       "Page": 0,
       "Kerning": {
@@ -1162,13 +1162,13 @@
       "Character": 96,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 369.0,
+        "X": 495.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 5.0
+        "Width": 7.0,
+        "Height": 7.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -1180,13 +1180,13 @@
       "Character": 97,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 375.0,
+        "X": 503.0,
         "Y": 0.0,
-        "Width": 6.0,
-        "Height": 8.0
+        "Width": 8.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 8,
       "Page": 0,
       "Kerning": {
@@ -1198,13 +1198,13 @@
       "Character": 98,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 382.0,
+        "X": 512.0,
         "Y": 0.0,
-        "Width": 6.0,
-        "Height": 8.0
+        "Width": 8.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 8,
       "Page": 0,
       "Kerning": {
@@ -1216,13 +1216,13 @@
       "Character": 99,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 389.0,
+        "X": 521.0,
         "Y": 0.0,
-        "Width": 3.0,
-        "Height": 8.0
+        "Width": 5.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 5,
       "Page": 0,
       "Kerning": {
@@ -1234,13 +1234,13 @@
       "Character": 100,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 393.0,
+        "X": 527.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 8.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -1252,13 +1252,13 @@
       "Character": 101,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 399.0,
+        "X": 535.0,
         "Y": 0.0,
-        "Width": 3.0,
-        "Height": 8.0
+        "Width": 5.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 5,
       "Page": 0,
       "Kerning": {
@@ -1270,13 +1270,13 @@
       "Character": 102,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 403.0,
+        "X": 541.0,
         "Y": 0.0,
-        "Width": 3.0,
-        "Height": 8.0
+        "Width": 5.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 5,
       "Page": 0,
       "Kerning": {
@@ -1288,13 +1288,13 @@
       "Character": 103,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 407.0,
+        "X": 547.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 8.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -1306,13 +1306,13 @@
       "Character": 104,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 413.0,
+        "X": 555.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 8.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -1324,13 +1324,13 @@
       "Character": 105,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 419.0,
+        "X": 563.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 8.0
+        "Width": 4.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 3,
       "Page": 0,
       "Kerning": {
@@ -1342,13 +1342,13 @@
       "Character": 106,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 422.0,
+        "X": 568.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 8.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -1360,13 +1360,13 @@
       "Character": 107,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 428.0,
+        "X": 576.0,
         "Y": 0.0,
-        "Width": 6.0,
-        "Height": 8.0
+        "Width": 8.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 8,
       "Page": 0,
       "Kerning": {
@@ -1378,13 +1378,13 @@
       "Character": 108,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 435.0,
+        "X": 585.0,
         "Y": 0.0,
-        "Width": 3.0,
-        "Height": 8.0
+        "Width": 5.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 5,
       "Page": 0,
       "Kerning": {
@@ -1396,13 +1396,13 @@
       "Character": 109,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 439.0,
+        "X": 591.0,
         "Y": 0.0,
-        "Width": 8.0,
-        "Height": 8.0
+        "Width": 10.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 9,
       "Page": 0,
       "Kerning": {
@@ -1414,13 +1414,13 @@
       "Character": 110,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 448.0,
+        "X": 602.0,
         "Y": 0.0,
-        "Width": 6.0,
-        "Height": 8.0
+        "Width": 8.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 8,
       "Page": 0,
       "Kerning": {
@@ -1432,13 +1432,13 @@
       "Character": 111,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 455.0,
+        "X": 611.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 8.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -1450,13 +1450,13 @@
       "Character": 112,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 461.0,
+        "X": 619.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 8.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -1468,13 +1468,13 @@
       "Character": 113,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 467.0,
+        "X": 627.0,
         "Y": 0.0,
-        "Width": 6.0,
-        "Height": 8.0
+        "Width": 8.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 8,
       "Page": 0,
       "Kerning": {
@@ -1486,13 +1486,13 @@
       "Character": 114,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 474.0,
+        "X": 636.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 8.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -1504,13 +1504,13 @@
       "Character": 115,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 480.0,
+        "X": 644.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 8.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -1522,13 +1522,13 @@
       "Character": 116,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 486.0,
+        "X": 652.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 8.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -1540,13 +1540,13 @@
       "Character": 117,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 492.0,
+        "X": 660.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 8.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -1558,13 +1558,13 @@
       "Character": 118,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 498.0,
+        "X": 668.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 8.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -1576,13 +1576,13 @@
       "Character": 119,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 504.0,
+        "X": 676.0,
         "Y": 0.0,
-        "Width": 8.0,
-        "Height": 8.0
+        "Width": 10.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 9,
       "Page": 0,
       "Kerning": {
@@ -1594,13 +1594,13 @@
       "Character": 120,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 513.0,
+        "X": 687.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 8.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -1612,13 +1612,13 @@
       "Character": 121,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 519.0,
+        "X": 695.0,
         "Y": 0.0,
-        "Width": 6.0,
-        "Height": 8.0
+        "Width": 8.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 8,
       "Page": 0,
       "Kerning": {
@@ -1630,13 +1630,13 @@
       "Character": 122,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 526.0,
+        "X": 704.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 8.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -1648,13 +1648,13 @@
       "Character": 123,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 532.0,
+        "X": 712.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 8.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -1666,13 +1666,13 @@
       "Character": 124,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 538.0,
+        "X": 720.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 8.0
+        "Width": 4.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 3,
       "Page": 0,
       "Kerning": {
@@ -1684,13 +1684,13 @@
       "Character": 125,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 541.0,
+        "X": 725.0,
         "Y": 0.0,
-        "Width": 5.0,
-        "Height": 8.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -8,
+      "XOffset": -1,
+      "YOffset": -9,
       "XAdvance": 6,
       "Page": 0,
       "Kerning": {
@@ -1702,13 +1702,13 @@
       "Character": 126,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 547.0,
+        "X": 733.0,
         "Y": 0.0,
-        "Width": 7.0,
-        "Height": 16.0
+        "Width": 10.0,
+        "Height": 18.0
       },
-      "XOffset": 1,
-      "YOffset": -16,
+      "XOffset": -1,
+      "YOffset": -17,
       "XAdvance": 9,
       "Page": 0,
       "Kerning": {

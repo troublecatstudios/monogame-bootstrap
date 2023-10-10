@@ -1,3 +1,4 @@
+using Troublecat.Data.Importers.Aseprite;
 using Troublecat.IO;
 
 namespace Troublecat;
@@ -12,6 +13,7 @@ public class ImportConfiguration {
     public string ResourcesPackDirectory { get; set; } = string.Empty;
 
     public Dictionary<string, FontImportOptions> Fonts { get; set; } = new();
+    public Dictionary<string, AsepriteImportOptions> Sprites { get; set; } = new();
 
     public string ResourcesBuildDirectoryAbsolute => Paths.GetPath("../../../../../", ResourcesBuildDirectory);
     public string ResourcesPackDirectoryAbsolute => Paths.GetPath("../../../../../", ResourcesPackDirectory);

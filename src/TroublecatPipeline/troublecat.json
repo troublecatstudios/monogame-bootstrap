@@ -6,6 +6,11 @@
             "Noir": {
                 "FontSize": 24
             }
+        },
+        "Sprites": {
+            "Ode-32": {
+                "ImportStyle": "TypicalGrid"
+            }
         }
     },
     "Serilog": {
