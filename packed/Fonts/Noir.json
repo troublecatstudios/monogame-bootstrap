@@ -1,8 +1,8 @@
 {
   "$type": "Troublecat.Assets.FontAsset, Troublecat",
   "TexturePath": "Noir.png",
-  "LineHeight": 12,
-  "Baseline": 7.9921875,
+  "LineHeight": 24,
+  "Baseline": 15.984375,
   "Characters": {
     "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[Troublecat.Core.Assets.Fonts.PixelFontCharacter, Troublecat]], System.Collections.Immutable",
     "32": {
@@ -17,7 +17,7 @@
       },
       "XOffset": 0,
       "YOffset": 0,
-      "XAdvance": 4,
+      "XAdvance": 8,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -30,12 +30,12 @@
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
         "X": 1.0,
         "Y": 0.0,
-        "Width": 1.0,
-        "Height": 4.0
+        "Width": 4.0,
+        "Height": 10.0
       },
-      "XOffset": 1,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": 0,
+      "YOffset": -9,
+      "XAdvance": 5,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -46,14 +46,14 @@
       "Character": 34,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 3.0,
+        "X": 6.0,
         "Y": 0.0,
-        "Width": 4.0,
-        "Height": 3.0
+        "Width": 10.0,
+        "Height": 9.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 5,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 9,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -64,14 +64,14 @@
       "Character": 35,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 8.0,
+        "X": 17.0,
         "Y": 0.0,
-        "Width": 4.0,
-        "Height": 4.0
+        "Width": 10.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 5,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 9,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -82,14 +82,14 @@
       "Character": 36,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 13.0,
+        "X": 28.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 5.0
+        "Width": 7.0,
+        "Height": 12.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -100,14 +100,14 @@
       "Character": 37,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 16.0,
+        "X": 36.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -118,14 +118,14 @@
       "Character": 38,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 19.0,
+        "X": 44.0,
         "Y": 0.0,
-        "Width": 4.0,
-        "Height": 4.0
+        "Width": 10.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 5,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 9,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -136,14 +136,14 @@
       "Character": 39,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 24.0,
+        "X": 55.0,
         "Y": 0.0,
-        "Width": 1.0,
-        "Height": 3.0
+        "Width": 4.0,
+        "Height": 7.0
       },
-      "XOffset": 1,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": 0,
+      "YOffset": -9,
+      "XAdvance": 5,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -154,14 +154,14 @@
       "Character": 40,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 26.0,
+        "X": 60.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 5.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 5,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -172,14 +172,14 @@
       "Character": 41,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 29.0,
+        "X": 66.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 5.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 5,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -190,14 +190,14 @@
       "Character": 42,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 32.0,
+        "X": 72.0,
         "Y": 0.0,
-        "Width": 3.0,
-        "Height": 4.0
+        "Width": 8.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 4,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 8,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -208,14 +208,14 @@
       "Character": 43,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 36.0,
+        "X": 81.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 2.0
+        "Width": 7.0,
+        "Height": 7.0
       },
-      "XOffset": 0,
-      "YOffset": -3,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -7,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -226,14 +226,14 @@
       "Character": 44,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 39.0,
+        "X": 89.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 3.0
+        "Width": 5.0,
+        "Height": 7.0
       },
-      "XOffset": 0,
-      "YOffset": -2,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -4,
+      "XAdvance": 5,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -244,14 +244,14 @@
       "Character": 45,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 42.0,
+        "X": 95.0,
         "Y": 0.0,
-        "Width": 3.0,
-        "Height": 1.0
+        "Width": 8.0,
+        "Height": 4.0
       },
-      "XOffset": 0,
-      "YOffset": -2,
-      "XAdvance": 4,
+      "XOffset": -1,
+      "YOffset": -6,
+      "XAdvance": 8,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -262,14 +262,14 @@
       "Character": 46,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 46.0,
+        "X": 104.0,
         "Y": 0.0,
-        "Width": 1.0,
-        "Height": 1.0
+        "Width": 4.0,
+        "Height": 4.0
       },
-      "XOffset": 0,
-      "YOffset": -1,
-      "XAdvance": 2,
+      "XOffset": -1,
+      "YOffset": -3,
+      "XAdvance": 3,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -280,14 +280,14 @@
       "Character": 47,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 48.0,
+        "X": 109.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -298,14 +298,14 @@
       "Character": 48,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 51.0,
+        "X": 117.0,
         "Y": 0.0,
-        "Width": 3.0,
-        "Height": 4.0
+        "Width": 8.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 4,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 8,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -316,14 +316,14 @@
       "Character": 49,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 55.0,
+        "X": 126.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -334,14 +334,14 @@
       "Character": 50,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 58.0,
+        "X": 134.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -352,14 +352,14 @@
       "Character": 51,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 61.0,
+        "X": 142.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 5.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 5,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -370,14 +370,14 @@
       "Character": 52,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 64.0,
+        "X": 148.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -388,14 +388,14 @@
       "Character": 53,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 67.0,
+        "X": 156.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -406,14 +406,14 @@
       "Character": 54,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 70.0,
+        "X": 164.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -424,14 +424,14 @@
       "Character": 55,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 73.0,
+        "X": 172.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -442,14 +442,14 @@
       "Character": 56,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 76.0,
+        "X": 180.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -460,14 +460,14 @@
       "Character": 57,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 79.0,
+        "X": 188.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -478,14 +478,14 @@
       "Character": 58,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 82.0,
+        "X": 196.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 5.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 5,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -496,14 +496,14 @@
       "Character": 59,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 85.0,
+        "X": 202.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 5.0
+        "Width": 5.0,
+        "Height": 12.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 5,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -514,14 +514,14 @@
       "Character": 60,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 88.0,
+        "X": 208.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -532,14 +532,14 @@
       "Character": 61,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 91.0,
+        "X": 216.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 2.0
+        "Width": 7.0,
+        "Height": 7.0
       },
-      "XOffset": 0,
-      "YOffset": -3,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -7,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -550,14 +550,14 @@
       "Character": 62,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 94.0,
+        "X": 224.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -568,14 +568,14 @@
       "Character": 63,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 97.0,
+        "X": 232.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -586,14 +586,14 @@
       "Character": 64,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 100.0,
+        "X": 240.0,
         "Y": 0.0,
-        "Width": 3.0,
-        "Height": 4.0
+        "Width": 8.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 4,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 8,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -604,14 +604,14 @@
       "Character": 65,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 104.0,
+        "X": 249.0,
         "Y": 0.0,
-        "Width": 3.0,
-        "Height": 4.0
+        "Width": 8.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 4,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 8,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -622,14 +622,14 @@
       "Character": 66,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 108.0,
+        "X": 258.0,
         "Y": 0.0,
-        "Width": 3.0,
-        "Height": 4.0
+        "Width": 8.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 4,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 8,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -640,14 +640,14 @@
       "Character": 67,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 112.0,
+        "X": 267.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 5.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 5,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -658,14 +658,14 @@
       "Character": 68,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 115.0,
+        "X": 273.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -676,14 +676,14 @@
       "Character": 69,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 118.0,
+        "X": 281.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 5.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 5,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -694,14 +694,14 @@
       "Character": 70,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 121.0,
+        "X": 287.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 5.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 5,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -712,14 +712,14 @@
       "Character": 71,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 124.0,
+        "X": 293.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -730,14 +730,14 @@
       "Character": 72,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 127.0,
+        "X": 301.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -748,14 +748,14 @@
       "Character": 73,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 130.0,
+        "X": 309.0,
         "Y": 0.0,
-        "Width": 1.0,
-        "Height": 4.0
+        "Width": 4.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 2,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 3,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -766,14 +766,14 @@
       "Character": 74,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 132.0,
+        "X": 314.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -784,14 +784,14 @@
       "Character": 75,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 135.0,
+        "X": 322.0,
         "Y": 0.0,
-        "Width": 3.0,
-        "Height": 4.0
+        "Width": 8.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 4,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 8,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -802,14 +802,14 @@
       "Character": 76,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 139.0,
+        "X": 331.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 5.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 5,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -820,14 +820,14 @@
       "Character": 77,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 142.0,
+        "X": 337.0,
         "Y": 0.0,
-        "Width": 4.0,
-        "Height": 4.0
+        "Width": 10.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 5,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 9,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -838,14 +838,14 @@
       "Character": 78,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 147.0,
+        "X": 348.0,
         "Y": 0.0,
-        "Width": 3.0,
-        "Height": 4.0
+        "Width": 8.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 4,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 8,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -856,14 +856,14 @@
       "Character": 79,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 151.0,
+        "X": 357.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -874,14 +874,14 @@
       "Character": 80,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 154.0,
+        "X": 365.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -892,14 +892,14 @@
       "Character": 81,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 157.0,
+        "X": 373.0,
         "Y": 0.0,
-        "Width": 3.0,
-        "Height": 4.0
+        "Width": 8.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 4,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 8,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -910,14 +910,14 @@
       "Character": 82,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 161.0,
+        "X": 382.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -928,14 +928,14 @@
       "Character": 83,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 164.0,
+        "X": 390.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -946,14 +946,14 @@
       "Character": 84,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 167.0,
+        "X": 398.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -964,14 +964,14 @@
       "Character": 85,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 170.0,
+        "X": 406.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -982,14 +982,14 @@
       "Character": 86,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 173.0,
+        "X": 414.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -1000,14 +1000,14 @@
       "Character": 87,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 176.0,
+        "X": 422.0,
         "Y": 0.0,
-        "Width": 4.0,
-        "Height": 4.0
+        "Width": 10.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 5,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 9,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -1018,14 +1018,14 @@
       "Character": 88,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 181.0,
+        "X": 433.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -1036,14 +1036,14 @@
       "Character": 89,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 184.0,
+        "X": 441.0,
         "Y": 0.0,
-        "Width": 3.0,
-        "Height": 4.0
+        "Width": 8.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 4,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 8,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -1054,14 +1054,14 @@
       "Character": 90,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 188.0,
+        "X": 450.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -1072,14 +1072,14 @@
       "Character": 91,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 191.0,
+        "X": 458.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 5.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 5,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -1090,14 +1090,14 @@
       "Character": 92,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 194.0,
+        "X": 464.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -1108,14 +1108,14 @@
       "Character": 93,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 197.0,
+        "X": 472.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 5.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 5,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -1126,14 +1126,14 @@
       "Character": 94,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 200.0,
+        "X": 478.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 3.0
+        "Width": 7.0,
+        "Height": 7.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -1144,14 +1144,14 @@
       "Character": 95,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 203.0,
+        "X": 486.0,
         "Y": 0.0,
-        "Width": 3.0,
-        "Height": 1.0
+        "Width": 8.0,
+        "Height": 4.0
       },
-      "XOffset": 0,
-      "YOffset": -1,
-      "XAdvance": 4,
+      "XOffset": -1,
+      "YOffset": -3,
+      "XAdvance": 8,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -1162,14 +1162,14 @@
       "Character": 96,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 207.0,
+        "X": 495.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 3.0
+        "Width": 7.0,
+        "Height": 7.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -1180,14 +1180,14 @@
       "Character": 97,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 210.0,
+        "X": 503.0,
         "Y": 0.0,
-        "Width": 3.0,
-        "Height": 4.0
+        "Width": 8.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 4,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 8,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -1198,14 +1198,14 @@
       "Character": 98,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 214.0,
+        "X": 512.0,
         "Y": 0.0,
-        "Width": 3.0,
-        "Height": 4.0
+        "Width": 8.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 4,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 8,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -1216,14 +1216,14 @@
       "Character": 99,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 218.0,
+        "X": 521.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 5.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 5,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -1234,14 +1234,14 @@
       "Character": 100,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 221.0,
+        "X": 527.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -1252,14 +1252,14 @@
       "Character": 101,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 224.0,
+        "X": 535.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 5.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 5,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -1270,14 +1270,14 @@
       "Character": 102,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 227.0,
+        "X": 541.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 5.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 5,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -1288,14 +1288,14 @@
       "Character": 103,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 230.0,
+        "X": 547.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -1306,14 +1306,14 @@
       "Character": 104,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 233.0,
+        "X": 555.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -1324,14 +1324,14 @@
       "Character": 105,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 236.0,
+        "X": 563.0,
         "Y": 0.0,
-        "Width": 1.0,
-        "Height": 4.0
+        "Width": 4.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 2,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 3,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -1342,14 +1342,14 @@
       "Character": 106,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 238.0,
+        "X": 568.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -1360,14 +1360,14 @@
       "Character": 107,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 241.0,
+        "X": 576.0,
         "Y": 0.0,
-        "Width": 3.0,
-        "Height": 4.0
+        "Width": 8.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 4,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 8,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -1378,14 +1378,14 @@
       "Character": 108,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 245.0,
+        "X": 585.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 5.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 5,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -1396,14 +1396,14 @@
       "Character": 109,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 248.0,
+        "X": 591.0,
         "Y": 0.0,
-        "Width": 4.0,
-        "Height": 4.0
+        "Width": 10.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 5,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 9,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -1414,14 +1414,14 @@
       "Character": 110,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 253.0,
+        "X": 602.0,
         "Y": 0.0,
-        "Width": 3.0,
-        "Height": 4.0
+        "Width": 8.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 4,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 8,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -1432,14 +1432,14 @@
       "Character": 111,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 257.0,
+        "X": 611.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -1450,14 +1450,14 @@
       "Character": 112,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 260.0,
+        "X": 619.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -1468,14 +1468,14 @@
       "Character": 113,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 263.0,
+        "X": 627.0,
         "Y": 0.0,
-        "Width": 3.0,
-        "Height": 4.0
+        "Width": 8.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 4,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 8,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -1486,14 +1486,14 @@
       "Character": 114,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 267.0,
+        "X": 636.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -1504,14 +1504,14 @@
       "Character": 115,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 270.0,
+        "X": 644.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -1522,14 +1522,14 @@
       "Character": 116,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 273.0,
+        "X": 652.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -1540,14 +1540,14 @@
       "Character": 117,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 276.0,
+        "X": 660.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -1558,14 +1558,14 @@
       "Character": 118,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 279.0,
+        "X": 668.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -1576,14 +1576,14 @@
       "Character": 119,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 282.0,
+        "X": 676.0,
         "Y": 0.0,
-        "Width": 4.0,
-        "Height": 4.0
+        "Width": 10.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 5,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 9,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -1594,14 +1594,14 @@
       "Character": 120,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 287.0,
+        "X": 687.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -1612,14 +1612,14 @@
       "Character": 121,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 290.0,
+        "X": 695.0,
         "Y": 0.0,
-        "Width": 3.0,
-        "Height": 4.0
+        "Width": 8.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 4,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 8,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -1630,14 +1630,14 @@
       "Character": 122,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 294.0,
+        "X": 704.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -1648,14 +1648,14 @@
       "Character": 123,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 297.0,
+        "X": 712.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -1666,14 +1666,14 @@
       "Character": 124,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 300.0,
+        "X": 720.0,
         "Y": 0.0,
-        "Width": 1.0,
-        "Height": 4.0
+        "Width": 4.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 2,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 3,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -1684,14 +1684,14 @@
       "Character": 125,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 302.0,
+        "X": 725.0,
         "Y": 0.0,
-        "Width": 2.0,
-        "Height": 4.0
+        "Width": 7.0,
+        "Height": 10.0
       },
-      "XOffset": 0,
-      "YOffset": -4,
-      "XAdvance": 3,
+      "XOffset": -1,
+      "YOffset": -9,
+      "XAdvance": 6,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"
@@ -1702,14 +1702,14 @@
       "Character": 126,
       "Glyph": {
         "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-        "X": 305.0,
+        "X": 733.0,
         "Y": 0.0,
-        "Width": 4.0,
-        "Height": 9.0
+        "Width": 10.0,
+        "Height": 18.0
       },
-      "XOffset": 0,
-      "YOffset": -9,
-      "XAdvance": 5,
+      "XOffset": -1,
+      "YOffset": -17,
+      "XAdvance": 9,
       "Page": 0,
       "Kerning": {
         "$type": "System.Collections.Immutable.ImmutableDictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Collections.Immutable"

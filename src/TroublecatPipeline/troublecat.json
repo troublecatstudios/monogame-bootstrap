@@ -1,7 +1,12 @@
 {
     "Importing": {
         "ResourcesBuildDirectory": "resources",
-        "ResourcesPackDirectory": "packed"
+        "ResourcesPackDirectory": "packed",
+        "Fonts": {
+            "Noir": {
+                "FontSize": 24
+            }
+        }
     },
     "Serilog": {
         "Using": [
