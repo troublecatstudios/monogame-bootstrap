@@ -10,6 +10,7 @@
   <ItemGroup>
     <Content Include="..\..\resources\**" CopyToOutputDirectory="PreserveNewest" LinkBase="resources" />
     <Content Include="packed\**" CopyToOutputDirectory="PreserveNewest" TargetPath="resources\%(RecursiveDir)\%(Filename)%(Extension)" />
+    <Content Include="troublecat.json" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" />

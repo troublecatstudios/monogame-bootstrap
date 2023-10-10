@@ -145,6 +145,12 @@ public class GameDataLoader : IDataLoader {
         _logger.LogInformation($"font '{fontPath}' loaded");
     }
 
+    public Texture2D GetTextureFromResource(string path, System.Reflection.Assembly? caller = null) {
+        caller ??= System.Reflection.Assembly.GetCallingAssembly();
+        var stream = caller.GetManifestResourceStream(path) ?? throw new Exception("Texture could not be read from resource: " + path);
+        return Texture2D.FromStream(_graphicsDevice, stream);
+    }
+
     /// <summary>
     /// Override this to load all shaders present in the game.
     /// </summary>

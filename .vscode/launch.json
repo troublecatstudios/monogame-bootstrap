@@ -16,6 +16,17 @@
             "stopAtEntry": false
         },
         {
+            "name": "Run Pipeline",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/src/TroublecatPipeline/bin/Debug/net7.0/TroublecatPipeline.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
             "name": "Launch Editor",
             "type": "coreclr",
             "request": "launch",

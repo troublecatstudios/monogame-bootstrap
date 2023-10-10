@@ -36,6 +36,16 @@
                 "${workspaceFolder}/Game.sln"
             ],
             "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "Process Assets",
+            "command": "dotnet",
+            "type": "process",
+            "args": ["run"],
+            "options": {
+              "cwd": "${workspaceFolder}/src/TroublecatPipeline"
+            },
+            "group": "build"
         }
     ]
 }

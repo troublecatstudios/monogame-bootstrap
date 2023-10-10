@@ -6,9 +6,10 @@ using Serilog;
 using Troublecat;
 using Troublecat.Data;
 using Troublecat.Data.Serialization;
+using Troublecat.IO;
 
 using var host = Host.CreateDefaultBuilder(args)
-    .ConfigureAppConfiguration((cfg) => cfg.AddJsonFile("troublecat.json"))
+    .ConfigureAppConfiguration((cfg) => cfg.AddJsonFile(Paths.GetPath("troublecat.json")))
     .ConfigureLogging((context, cfg) => {
         cfg.ClearProviders();
         var logger = new LoggerConfiguration()
