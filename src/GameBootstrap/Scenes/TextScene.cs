@@ -117,6 +117,7 @@ public class TextScene : GameScene {
     }
 
     public override void Draw(SpriteBatch spriteBatch) {
+        base.Draw(spriteBatch);
         DrawFont(_exampleText, _font, spriteBatch, CenterScreen, Vector2.One, Color.White, shadowOffset: new Vector2(5, 1), shadowColor: Color.Black, strokeColor: Color.Orange, positions: _characterPositions);
 
         var effectName = _effectNames[_effectIndex];

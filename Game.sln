@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TroublecatPipeline", "src\T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game", "src\GameBootstrap\GameBootstrap.csproj", "{0BBD33A8-D440-4453-BE02-1BC4350E7607}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Troublecat.Aseprite", "src\Troublecat.Aseprite\Troublecat.Aseprite.csproj", "{385A469B-EE5D-432A-BD86-2768669AF7AB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{0BBD33A8-D440-4453-BE02-1BC4350E7607}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BBD33A8-D440-4453-BE02-1BC4350E7607}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0BBD33A8-D440-4453-BE02-1BC4350E7607}.Release|Any CPU.Build.0 = Release|Any CPU
+		{385A469B-EE5D-432A-BD86-2768669AF7AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{385A469B-EE5D-432A-BD86-2768669AF7AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{385A469B-EE5D-432A-BD86-2768669AF7AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{385A469B-EE5D-432A-BD86-2768669AF7AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,5 +52,6 @@ Global
 		{A775F3FE-2217-4985-97B4-8DD500124497} = {E9877B14-F4DC-4CF5-AB6B-337F38B26CD7}
 		{074ACC39-EC5A-492D-BBF3-019D79F9EDE3} = {E9877B14-F4DC-4CF5-AB6B-337F38B26CD7}
 		{0BBD33A8-D440-4453-BE02-1BC4350E7607} = {E9877B14-F4DC-4CF5-AB6B-337F38B26CD7}
+		{385A469B-EE5D-432A-BD86-2768669AF7AB} = {E9877B14-F4DC-4CF5-AB6B-337F38B26CD7}
 	EndGlobalSection
 EndGlobal

@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Troublecat.Math;
 using Troublecat.Core.Assets.Fonts;
 using Troublecat.Core;
+using GameBootstrap.Components;
 
 
 namespace GameBootstrap;
@@ -36,6 +37,8 @@ public class GameScene {
         new Point(1, 2),
     };
 
+    protected List<IComponent> Components { get; private set; } = new();
+
     public Vector2 BaseScreenSize { get; set; }
 
     public Vector2 CenterScreen => (BaseScreenSize/2);
@@ -45,16 +48,38 @@ public class GameScene {
         _atlasTextureFactory = services.GetRequiredService<IAtlasTextureFactory>();
     }
 
+    public T AddComponent<T>() where T : IComponent, new() {
+        var component = new T();
+        Components.Add(component);
+        return component;
+    }
+
     public virtual void LoadContent(IDataLoader dataLoader) {
 
     }
 
     public virtual void Update(Timing time) {
-
+        UpdateComponents(time);
     }
 
     public virtual void Draw(SpriteBatch spriteBatch) {
+        DrawComponents(spriteBatch);
+    }
 
+    protected virtual void UpdateComponents(Timing time) {
+        foreach(var c in Components) {
+            if (c is IUpdateableComponent updateable) {
+                updateable.Update(time);
+            }
+        }
+    }
+
+    protected virtual void DrawComponents(SpriteBatch spriteBatch) {
+        foreach(var c in Components) {
+            if (c is IDrawableComponent drawable) {
+                drawable.Draw(spriteBatch);
+            }
+        }
     }
 
     protected void DrawInternalTexture(SpriteBatch spriteBatch, InternalTexture texture, Vector2 pos, Vector2 scale, Rectangle clip, Color color, Vector2? origin = null) {

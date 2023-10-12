@@ -1,11 +1,13 @@
 using System.Globalization;
 using System.Text.RegularExpressions;
 using Troublecat.Math;
+using SkiaSharp;
 
 namespace Troublecat.Core.Graphics;
 
 public struct Color : IEquatable<Color>
 {
+    private const float MaxColorValue = 255f;
     private static readonly Color _white = new(1, 1, 1);
     private static readonly Color _gray = new(0.5f, 0.5f, 0.5f);
     private static readonly Color _black = new(0, 0, 0);
@@ -54,13 +56,19 @@ public struct Color : IEquatable<Color>
     public static Color CreateFrom256(int r, int g, int b) =>
         new Color(r / 256f, g / 256f, b / 256f, 1f);
 
-    public static implicit operator Microsoft.Xna.Framework.Color(Color c) => new(c.R, c.G, c.B, c.A);
-    public static implicit operator Color(Microsoft.Xna.Framework.Color c) => new(c.R / 255f, c.G / 255f, c.B / 255f, c.A / 255f);
+    public static implicit operator Color(Microsoft.Xna.Framework.Color c) => new(c.R / MaxColorValue, c.G / MaxColorValue, c.B / MaxColorValue, c.A / MaxColorValue);
     public static implicit operator Color(System.Numerics.Vector4 c) => new(c.X, c.Y, c.Z, c.W);
+    public static implicit operator Microsoft.Xna.Framework.Color(Color c) => new(c.R * MaxColorValue, c.G * MaxColorValue, c.B * MaxColorValue, c.A * MaxColorValue);
+    public static implicit operator SKColor(Color c) => new((byte)(c.R * MaxColorValue), (byte)(c.G * MaxColorValue), (byte)(c.B * MaxColorValue), (byte)(c.A * MaxColorValue));
+    public static implicit operator System.Drawing.Color(Color c) => System.Drawing.Color.FromArgb(
+        Maths.FloorToInt(c.R * MaxColorValue),
+        Maths.FloorToInt(c.G * MaxColorValue),
+        Maths.FloorToInt(c.B * MaxColorValue),
+        Maths.FloorToInt(c.A * MaxColorValue));
 
     //public static Color operator *(Color c, float factor) => new(c.R * factor, c.G * factor, c.B * factor, c.A * factor);
 
-    public static implicit operator uint(Color c) { uint ret = (uint)(c.A * 255); ret <<= 8; ret += (uint)(c.B * 255); ret <<= 8; ret += (uint)(c.G * 255); ret <<= 8; ret += (uint)(c.R * 255); return ret; }
+    public static implicit operator uint(Color c) { uint ret = (uint)(c.A * MaxColorValue); ret <<= 8; ret += (uint)(c.B * MaxColorValue); ret <<= 8; ret += (uint)(c.G * MaxColorValue); ret <<= 8; ret += (uint)(c.R * MaxColorValue); return ret; }
 
     public Color Darken(float r) => new(R * r, G * r, B * r, A);
     public static Color operator *(Color l, float r) => new(l.R * r, l.G * r, l.B * r, l.A * r);
@@ -128,7 +136,7 @@ public struct Color : IEquatable<Color>
         int b = hexValue & 0xFF;
 
         // Normalize the color values to the range of 0 to 1
-        float normalize = 1.0f / 255.0f;
+        float normalize = 1.0f / MaxColorValue;
         float rf = r * normalize;
         float gf = g * normalize;
         float bf = b * normalize;

@@ -92,7 +92,7 @@ internal class FontImporter : IResourceImporter {
                 }
             }
 
-            _logger.LogInformation($"Reticulating splines...");
+            _logger.LogInformation($"Rendering characters to virtual canvas...");
 
             {
                 using SKBitmap bitmap = new(nextPosition, nextPosition, SKImageInfo.PlatformColorType, SKAlphaType.Premul);
