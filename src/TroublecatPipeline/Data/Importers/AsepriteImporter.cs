@@ -467,7 +467,7 @@ public class AsepriteImporter : IResourceImporter {
             int from = (animation.Animation != LoopAnimation.Reverse) ? animation.FrameFrom : animation.FrameTo;
             int step = (animation.Animation != LoopAnimation.Reverse) ? 1 : -1;
             int keyIndex = from;
-
+            float duration = 0f;
             for (int i = 0; i < length; i++) {
                 if (i >= length) {
                     keyIndex = from;
@@ -477,10 +477,13 @@ public class AsepriteImporter : IResourceImporter {
                     Sprite = sprites[keyIndex],
                     FrameDuration = file.Frames[keyIndex].FrameDuration / 1000f,
                 };
+                duration += frame.FrameDuration;
 
                 keyIndex += step;
                 asset.Frames.Add(frame);
             }
+
+            asset.Duration = duration;
 
             switch (animation.Animation) {
                 case LoopAnimation.Forward:
