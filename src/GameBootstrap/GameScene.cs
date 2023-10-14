@@ -14,6 +14,7 @@ using Troublecat.Core.Assets.Fonts;
 using Troublecat.Core;
 using GameBootstrap.Components;
 using Troublecat.Core.Assets.Sprites;
+using Troublecat.Diagnostics;
 
 
 namespace GameBootstrap;
@@ -21,6 +22,7 @@ namespace GameBootstrap;
 public class GameScene {
     protected IDataLoader _dataLoader;
     protected IAtlasTextureFactory _atlasTextureFactory;
+    private GraphicsDevice _graphics;
     private List<Point> _strokePoints = new() {
         new Point(-1, -1),
         new Point(0, -1),
@@ -47,12 +49,18 @@ public class GameScene {
     public void ConfigureServices(IServiceProvider services) {
         _dataLoader = services.GetRequiredService<IDataLoader>();
         _atlasTextureFactory = services.GetRequiredService<IAtlasTextureFactory>();
+        _graphics = services.GetRequiredService<GraphicsDevice>();
     }
 
     public T AddComponent<T>() where T : IComponent, new() {
         var component = new T();
         Components.Add(component);
         return component;
+    }
+
+    public T AddComponent<T>(T instance) where T : IComponent {
+        Components.Add(instance);
+        return instance;
     }
 
     public virtual void LoadContent(IDataLoader dataLoader) {
@@ -112,7 +120,8 @@ public class GameScene {
 
     protected void DrawSprite(SpriteBatch spriteBatch, Sprite sprite, Vector2 position, Vector2 scale, Color color, float roation = 0f) {
         var xnaTexture = _dataLoader.GetAsset<Texture2D>(sprite.TextureName);
-        spriteBatch.Draw(xnaTexture, position, sprite.Rectangle, Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0);
+        var offset = sprite.Rectangle.Size * sprite.Pivot;
+        spriteBatch.Draw(xnaTexture, position - offset, sprite.Rectangle, Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0);
     }
 
     protected void DrawInternalTexture(SpriteBatch spriteBatch, InternalTexture texture, Vector2 pos, Vector2 scale, Color color, float rotation = 0f) {
@@ -235,7 +244,6 @@ public class GameScene {
 
                 // draw normal character
                 DrawInternalTexture(spriteBatch, texture, pos, scale, c.Glyph, currentColor);
-
 
                 offset.X += c.XAdvance * scale.X;
                 currentWidth += c.XAdvance * scale.X;
