@@ -17,8 +17,9 @@ namespace Troublecat.Aseprite;
 /// </remarks>
 public class AsepriteFile {
     public static AsepriteFile FromFile(string assetPath) {
+        var key = String.Join(Path.DirectorySeparatorChar, assetPath.Split(Path.DirectorySeparatorChar)[^2..^0]);
         FileStream fileStream = new(assetPath, FileMode.Open, FileAccess.Read);
-        AsepriteFile aseFile = new(fileStream, Path.GetFileName(assetPath));
+        AsepriteFile aseFile = new(fileStream, key);
         fileStream.Close();
 
         return aseFile;
@@ -37,6 +38,11 @@ public class AsepriteFile {
         _blender = blender ?? new Texture2DBlender();
         BinaryReader reader = new(stream);
         byte[] header = reader.ReadBytes(128);
+
+        if (name.IndexOf(".") > -1) {
+            var index = name.IndexOf(".");
+            name = name[..index];
+        }
 
         Name = name;
 

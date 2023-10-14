@@ -10,6 +10,7 @@ using Troublecat.Assets;
 using Troublecat.Configuration;
 using Troublecat.Core;
 using Troublecat.Core.Assets.Fonts;
+using Troublecat.Core.Assets.Sprites;
 using Troublecat.Core.Graphics;
 using Troublecat.Data.Serialization;
 using Troublecat.IO;
@@ -25,6 +26,7 @@ public class GameDataLoader : IDataLoader {
     protected readonly Dictionary<Guid, Object> _allAssets = new();
     private ImmutableDictionary<string, PixelFont> _fonts = ImmutableDictionary<string, PixelFont>.Empty;
     protected readonly Dictionary<string, Effect> _effects = new();
+    private ImmutableDictionary<string, AsepriteAsset> _sprites = ImmutableDictionary<string, AsepriteAsset>.Empty;
 
     private readonly string _packedContentDirectory = "resources";
     private readonly ILogger<GameDataLoader> _logger;
@@ -32,11 +34,12 @@ public class GameDataLoader : IDataLoader {
     private readonly TroublecatConfiguration _config;
     private readonly IShaderProvider? _shaderProvider;
     private readonly AssetSerializer _serializer;
+    private readonly ImmutableArray<string>.Builder _uniqueTextureBuilder;
     public readonly CacheDictionary<string, Texture2D> CachedUniqueTextures = new(32);
 
     public ImmutableArray<string> AvailableUniqueTextures;
 
-    public event OnAfterAllContentLoadedEvent OnAfterAllContentLoaded;
+    public event OnAfterAllContentLoadedEvent? OnAfterAllContentLoaded;
 
     public GameDataLoader(ILogger<GameDataLoader> logger, GraphicsDevice graphicsDevice, IOptions<TroublecatConfiguration> config, AssetSerializer serializer, IShaderProvider? shaderProvider = null) {
         _logger = logger;
@@ -44,6 +47,7 @@ public class GameDataLoader : IDataLoader {
         _config = config.Value;
         _shaderProvider = shaderProvider;
         _serializer = serializer;
+        _uniqueTextureBuilder = ImmutableArray.CreateBuilder<string>();
     }
 
     public Task LoadContentProgress { get; private set; } = Task.CompletedTask;
@@ -63,6 +67,9 @@ public class GameDataLoader : IDataLoader {
         }
         if (typeof(T) == typeof(Texture2D)) {
             return FetchTexture(path) as T;
+        }
+        if (typeof(T) == typeof(AsepriteAsset) && _sprites.TryGetValue(path, out var sprite)) {
+            return sprite as T;
         }
         if (typeof(T) == typeof(InternalTexture)) {
             return new InternalTexture(path) as T;
@@ -92,11 +99,14 @@ public class GameDataLoader : IDataLoader {
                 if (Paths.Exists(_config.ResourcesPackDirectory)) {
                     LoadAllAssetsAtPath(_config.ResourcesPackDirectory);
                     LoadFonts();
+                    LoadSprites();
                 } else {
                     _logger.LogError($"Packed directory has not been created. path: {_config.ResourcesPackDirectoryAbsolute}");
                 }
             }
             _logger.LogInformation($"content load complete!");
+            // finalize textures
+            AvailableUniqueTextures = _uniqueTextureBuilder.ToImmutable();
             OnAfterAllContentLoaded?.Invoke();
         } catch (Exception e) {
             LoadContentProgress = Task.FromException(e);
@@ -114,17 +124,40 @@ public class GameDataLoader : IDataLoader {
         }
     }
 
+    private void LoadSprites() {
+        string? spritesFolder = Paths.GetPath(_config.ResourcesPackDirectory, "sprites");
+        foreach (string file in Directory.EnumerateFiles(spritesFolder)) {
+            if (Path.GetExtension(file) == ".png") {
+                _uniqueTextureBuilder.Add(Paths.GetPathWithoutExtension(Path.GetRelativePath(_config.ResourcesPackDirectoryAbsolute, file)));
+            } else if (Path.GetExtension(file) == ".json") {
+                LoadSprite(file);
+            }
+        }
+    }
+
+    private void LoadSprite(string spritePath) {
+        var json = Files.ReadText(spritePath);
+        var asset = _serializer.DeserializeGeneric<AsepriteAsset>(json)!;
+        var key = ConvertPathToKey(Paths.GetPathWithoutExtension(Path.GetRelativePath(_config.ResourcesPackDirectoryAbsolute, spritePath)));
+        if (_fonts.ContainsKey(key)) {
+            _logger.LogError($"Unable to load font: {spritePath}. Duplicate index found!");
+            return;
+        }
+
+        // font.AddFontSize(XmlHelper.LoadXML(Path.Join(PackedBinDirectoryPath, "fonts", $"{fontName}.fnt")).DocumentElement!, AtlasId.None);
+        _sprites = _sprites.Add(key, asset);
+        _logger.LogInformation($"sprite '{spritePath}' loaded");
+    }
+
     private void LoadFonts() {
         string? fontsFolder = Paths.GetPath(_config.ResourcesPackDirectory, "fonts");
-        var uniqueTextures = ImmutableArray.CreateBuilder<string>();
         foreach (string file in Directory.EnumerateFiles(fontsFolder)) {
             if (Path.GetExtension(file) == ".png") {
-                uniqueTextures.Add(Paths.GetPathWithoutExtension(Path.GetRelativePath(_config.ResourcesPackDirectoryAbsolute, file)));
+                _uniqueTextureBuilder.Add(Paths.GetPathWithoutExtension(Path.GetRelativePath(_config.ResourcesPackDirectoryAbsolute, file)));
             } else if (Path.GetExtension(file) == ".json") {
                 LoadFont(file);
             }
         }
-        AvailableUniqueTextures = uniqueTextures.ToImmutable();
     }
 
     private void LoadFont(string fontPath) {

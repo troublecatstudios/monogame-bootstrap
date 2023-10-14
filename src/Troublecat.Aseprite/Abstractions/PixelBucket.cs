@@ -24,6 +24,10 @@
             Height = height;
         }
 
+        public PixelBucket(int width, int height, AsepriteColor[] pixels) : this(width, height) {
+            _pixels = pixels;
+        }
+
         public void SetPixel(int x, int y, AsepriteColor color) {
             var index = CalculateIndex(x, y);
             _pixels[index] = color;

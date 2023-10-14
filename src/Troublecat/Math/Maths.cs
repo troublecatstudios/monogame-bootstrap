@@ -6,6 +6,8 @@ public partial class Maths {
 
     public static float Floor(float f) => (float)System.Math.Floor(f);
 
+    public static float Pow(float f, float p) => (float)System.Math.Pow(f, p);
+
     public static int FloorToInt(float v) => (int)MathF.Floor(v);
 
     public static int CeilToInt(float v) => (int)MathF.Ceiling(v);

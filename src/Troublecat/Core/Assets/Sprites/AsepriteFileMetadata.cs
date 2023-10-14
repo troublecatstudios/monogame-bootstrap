@@ -1,4 +1,4 @@
-namespace Troublecat.Core.Assets;
+namespace Troublecat.Core.Assets.Sprites;
 
 [Serializable]
 public class AsepriteFileMetadata {

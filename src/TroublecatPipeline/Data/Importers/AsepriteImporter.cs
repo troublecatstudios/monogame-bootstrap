@@ -1,18 +1,19 @@
 
 using System.Numerics;
+using System.Text;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using Microsoft.Xna.Framework.Graphics;
 using Troublecat.Aseprite;
 using Troublecat.Aseprite.Abstractions;
 using Troublecat.Aseprite.Chunks;
-using Troublecat.Core.Assets;
+using Troublecat.Core.Assets.Sprites;
 using Troublecat.Core.Diagnostics;
 using Troublecat.Core.Geometry;
 using Troublecat.Core.Graphics;
 using Troublecat.Data.Importers.Aseprite;
 using Troublecat.Data.Serialization;
 using Troublecat.IO;
+using Troublecat.Math;
 using Troublecat.Utilities;
 
 namespace Troublecat.Data.Importers;
@@ -38,28 +39,38 @@ public class AsepriteImporter : IResourceImporter {
         public int FrameIndex;
     }
 
+    private struct TextureWriteOperation {
+        public string FilePath;
+        public PixelBucket PixelData;
+    }
+
     public async Task ImportAsync(string resourcePath) {
         using (_logger.BeginScope(new PerfScope())) {
             if (!Paths.Exists(resourcePath)) {
                 _logger.LogError($"Resource not found! Does '{resourcePath}' exist?!");
                 return;
             }
+
+            var textures = new List<TextureWriteOperation>();
+
             var packPath = Paths.GetPath(_configuration.ResourcesPackDirectoryAbsolute, "Sprites");
             var fileName = Path.GetFileNameWithoutExtension(resourcePath);
+            var filenameWithoutExtension = Path.GetFileNameWithoutExtension(resourcePath);
 
             var jsonFile = $"{fileName}.json";
             var jsonPackPath = Paths.GetPath(packPath, jsonFile);
 
-            string GetTexturePackPath(string textureName) => Paths.GetPath(packPath!, $"{textureName}.png");
+            string GetTexturePackPath(string textureName) => Paths.GetPath(packPath, $"{textureName}.png");
 
             AsepriteImportOptions options = new();
-            _configuration.Sprites.TryGetValue(fileName, out options);
+            if (_configuration.Sprites.TryGetValue(fileName, out var opts)) {
+                options = opts;
+            }
             _logger.LogInformation($"Importing {resourcePath}");
 
             // load the aseprite file from disk
             var file = AsepriteFile.FromFile(resourcePath);
             int frameCount = file.Header.Frames;
-            var descriptor = new AsepriteDescriptor();
 
             _logger.LogInformation($"Importing {file.Frames.Count} frames from aseprite file");
 
@@ -73,6 +84,11 @@ public class AsepriteImporter : IResourceImporter {
             // create a basic atlas for the sprite
             _logger.LogInformation($"Generating texture atlas...", new { Width = file.Header.Width, Height = file.Header.Height });
             var atlasPack = CreateAtlas(frames, file, options, baseTwo: false);
+
+            textures.Add(new TextureWriteOperation {
+               PixelData = atlasPack.Atlas,
+               FilePath = GetTexturePackPath(filenameWithoutExtension)
+            });
 
             // extract various masks
             //   - emission
@@ -97,24 +113,48 @@ public class AsepriteImporter : IResourceImporter {
                 }
             }
 
+            // import any animations MUST BE DONE AFTER SPRITES ARE IMPORTED
+            var animations = ImportAnimations(file, atlasPack.Sprites);
+
             // create palette swap texture as well
-
-            // start saving the assets
-
-            // write out the atlas
-            descriptor.AtlasTexturePath = GetTexturePackPath($"{file.Name}_atlas");
-            PngUtilities.WriteImage(descriptor.AtlasTexturePath, atlasPack.Atlas.Width, atlasPack.Atlas.Height, atlasPack.Atlas.Pixels);
-
-            // write out each of the secondary textures
-            foreach(var entry in secondaryTextures) {
-                var secondaryPath = GetTexturePackPath($"{file.Name}_{entry.Key}");
-                descriptor.SecondaryTexturePaths.Add(entry.Key, secondaryPath);
-                PngUtilities.WriteImage(secondaryPath, entry.Value.Width, entry.Value.Height, entry.Value.Pixels);
+            if (options.EnablePaletteMap &&
+                TryGeneratePalette(atlasPack.Atlas, options.PaletteSize.X, options.PaletteSize.Y, out var palette) &&
+                TryGeneratePaletteMap(atlasPack.Atlas, palette, out var map, options.PaletteMapColorStep)) {
+                    textures.Add(new TextureWriteOperation {
+                        FilePath = GetTexturePackPath($"{filenameWithoutExtension}_PaletteTex"),
+                        PixelData = palette
+                    });
+                    textures.Add(new TextureWriteOperation {
+                        FilePath = GetTexturePackPath($"{filenameWithoutExtension}_MapTex"),
+                        PixelData = map
+                    });
             }
 
-            descriptor.Entries = atlasPack.Entries;
-            descriptor.FrameCount = frames.Length;
-            descriptor.Metadata = metadata;
+            // start saving the assets
+            var atlasSavePath = GetTexturePackPath($"{filenameWithoutExtension}");
+            var descriptor = new AsepriteAsset() {
+                Name = Paths.PathToKey(atlasSavePath),
+                Animations = animations,
+                AtlasTexturePath = Paths.PathToKey(atlasSavePath),
+                Sprites = atlasPack.Sprites,
+                Metadata = metadata,
+            };
+
+            // assemble each of the secondary textures
+            foreach(var entry in secondaryTextures) {
+                var secondaryPackPath = GetTexturePackPath($"{filenameWithoutExtension}_{entry.Key}");
+                descriptor.SecondaryTexturePaths.Add(entry.Key, Paths.PathToKey(secondaryPackPath));
+                textures.Add(new TextureWriteOperation {
+                    FilePath = secondaryPackPath,
+                    PixelData = new PixelBucket(entry.Value.Width, entry.Value.Height, entry.Value.Pixels)
+                });
+            }
+
+            // write out the textures
+            foreach(var op in textures) {
+                _logger.LogInformation($"Writing image {op.FilePath}");
+                PngUtilities.WriteImage(op.FilePath, op.PixelData.Width, op.PixelData.Height, op.PixelData.Pixels);
+            }
 
             string json = await _serializer.SerializeAsync(descriptor, false);
             await Files.SaveTextAsync(json, jsonPackPath);
@@ -122,7 +162,7 @@ public class AsepriteImporter : IResourceImporter {
         return;
     }
 
-    private (PixelBucket Atlas, List<AsepriteAtlasEntry> Entries) CreateAtlas(PixelBucket[] sprites, AsepriteFile file, AsepriteImportOptions options, bool baseTwo = true) {
+    private (PixelBucket Atlas, List<Sprite> Sprites) CreateAtlas(PixelBucket[] sprites, AsepriteFile file, AsepriteImportOptions options, bool baseTwo = true) {
         var spriteSize = new Vector2(file.Header.Width, file.Header.Height);
         var cols = sprites.Length;
         var rows = 1;
@@ -165,7 +205,7 @@ public class AsepriteImporter : IResourceImporter {
         return CreateAtlas(sprites, spriteSize, file, cols, rows, options, baseTwo);
     }
 
-    private (PixelBucket Atlas, List<AsepriteAtlasEntry> Entries) CreateAtlas(PixelBucket[] sprites, Vector2 spriteSize, AsepriteFile file, int cols, int rows, AsepriteImportOptions options, bool baseTwo = true) {
+    private (PixelBucket Atlas, List<Sprite> Sprites) CreateAtlas(PixelBucket[] sprites, Vector2 spriteSize, AsepriteFile file, int cols, int rows, AsepriteImportOptions options, bool baseTwo = true) {
         int width = cols * (int)spriteSize.X;
         int height = rows * (int)spriteSize.Y;
 
@@ -179,7 +219,7 @@ public class AsepriteImporter : IResourceImporter {
         var index = 0;
         var sliceList = new List<SliceInfo>();
 
-        var importEntries = new List<AsepriteAtlasEntry>();
+        var importSprites = new List<Sprite>();
 
         for (var row = 0; row < rows; row++) {
             for (var col = 0; col < cols; col++) {
@@ -229,13 +269,15 @@ public class AsepriteImporter : IResourceImporter {
                         }
                     }
                 }
-                var entry = new AsepriteAtlasEntry {
+                var sprite = new Sprite {
+                    TextureName = file.Name,
                     Rectangle = spriteRect,
                     Pivot = options.SpritePivot,
                     Border = Vector4.Zero,
+                    FrameIndex = index,
                     Name = $"{file.Name}_{sprites[index].Name}"
                 };
-                importEntries.Add(entry);
+                importSprites.Add(sprite);
 
                 index++;
                 if (index >= sprites.Length)
@@ -255,17 +297,18 @@ public class AsepriteImporter : IResourceImporter {
                     var slicePosition = slice.Position;
                     var sliceSize = slice.Size;
                     var sliceOffset = new Vector2(slicePosition.X, spriteSize.Y - slicePosition.Y - sliceSize.Y);
-                    var entry = new AsepriteAtlasEntry {
+                    var sprite = new Sprite {
                         Rectangle = new Rectangle(new Vector2(cellX, cellY) + sliceOffset, sliceSize),
                         Pivot = slice.Pivot,
                         Border = slice.Border,
-                        Name = $"{file.Name}_{slice.Name}_{sprites[i].Name}"
+                        Name = $"{file.Name}_{slice.Name}_{sprites[i].Name}",
+                        FrameIndex = slice.FrameIndex,
                     };
-                    importEntries.Add(entry);
+                    importSprites.Add(sprite);
                 }
             }
         }
-        return (atlas, importEntries);
+        return (atlas, importSprites);
     }
 
     public PixelBucket FlipTexture(PixelBucket input, bool horizontal = false, bool vertical = false) {
@@ -295,6 +338,196 @@ public class AsepriteImporter : IResourceImporter {
         flipped.SetPixels(0, 0, input.Width, input.Height, flipped_data);
 
         return flipped;
+    }
+
+    private static bool TryGeneratePalette(PixelBucket sourceTexture, int paletteWidth, int paletteHeight, out PixelBucket palette) {
+        int maxIndex = paletteHeight * paletteWidth - 1;
+        palette = new PixelBucket(paletteWidth, paletteHeight);
+        var paletteSwatch = new List<Color>(paletteHeight * paletteWidth);
+        int height = sourceTexture.Height;
+        int width = sourceTexture.Width;
+        int idx = 0;
+
+        // read the source texture top to bottom, left to right
+        for (int y = height - 1; y >= 0; y--) {
+            for (int x = 0; x < width; x++) {
+                if (idx > maxIndex) {
+                    return false;
+                }
+
+                var px = sourceTexture.GetPixel(x, y);
+                if (px.a == 0.0f || paletteSwatch.Contains(px.ToColor())) continue;
+                paletteSwatch.Add(px.ToColor());
+                idx++;
+            }
+        }
+
+        int paletteIdx = 0;
+        foreach (var c in paletteSwatch) {
+            var pos = GetPalettePosition(paletteIdx, paletteWidth, paletteHeight);
+            palette.SetPixel(pos.x, pos.y, c.ToAseprite());
+            paletteIdx++;
+        }
+
+        return true;
+    }
+
+    private static bool TryGeneratePaletteMap(PixelBucket sourceTexture, PixelBucket paletteTexture, out PixelBucket map, int paletteColorStep = 8) {
+        int maxIndex = (paletteTexture.Width * paletteTexture.Height) - 1;
+        map = new PixelBucket(sourceTexture.Width, sourceTexture.Height);
+        var palette = FlattenPalette(paletteTexture);
+        int height = sourceTexture.Height;
+        int width = sourceTexture.Width;
+        int idx = 0;
+
+        // read the source texture top to bottom, left to right
+        // i don't think the ordering really matters at this point
+        // since the lookups are all tied to the palette
+        for (int y = height - 1; y >= 0; y--) {
+            for (int x = 0; x < width; x++) {
+                if (idx > maxIndex) {
+                    return false;
+                }
+                var px = sourceTexture.GetPixel(x, y);
+                int paletteIndex = palette.IndexOf(px.ToColor());
+
+                if (px.a == 0.0f || paletteIndex == -1) {
+                    map.SetPixel(x, y, Color.White.ToAseprite());
+                    if (px.a > 0.0f && paletteIndex == -1) {
+                        var c = px;
+                    }
+                    continue;
+                }
+
+                var pos = GetPalettePosition(paletteIndex, paletteTexture.Width, paletteTexture.Height);
+                var color = GetMapColor(pos, paletteColorStep);
+
+                // Debug.Log($"INFO: [CreatePaletteMap] palette index: {paletteIndex}, palette color: {px.ToLogString()}, map color: {color.ToLogString()}, palette position: ({pos.x}, {pos.y})");
+
+                map.SetPixel(x, y, color.ToAseprite());
+            }
+        }
+        return true;
+    }
+
+    private static List<Color> FlattenPalette(PixelBucket paletteTexture) {
+        var palette = new List<Color>(paletteTexture.Width * paletteTexture.Height);
+        int height = paletteTexture.Height;
+        int width = paletteTexture.Width;
+
+        // read the palette from bottom to top, left to right
+        for (int y = 0; y < height; y++) {
+            for (int x = 0; x < width; x++) {
+                var px = paletteTexture.GetPixel(x, y);
+                palette.Add(px.ToColor());
+            }
+        }
+
+        return palette;
+    }
+
+    private static Color GetMapColor((int x, int y) position, int paletteColorStep = 8, bool applyGamma = false, float gammaValue = 2.2f) {
+        float r = (position.x * paletteColorStep) / 255f;
+        float g = (position.y * paletteColorStep) / 255f;
+
+        if (applyGamma) {
+            r = Maths.Pow(r, 1 / gammaValue);
+            g = Maths.Pow(g, 1 / gammaValue);
+        }
+
+        var c = new Color(r, g, 0f, 1f);
+        return c;
+    }
+
+    private static (int x, int y) GetPalettePosition(int index, int paletteWidth, int paletteHeight) {
+        int y = index / paletteWidth;
+        int x = index % paletteWidth;
+
+        return (x, y);
+    }
+
+    private static List<AsepriteAnimation> ImportAnimations(AsepriteFile file, List<Sprite> sprites) {
+        var animations = file.GetAnimations();
+        var animSettings = new List<AsepriteAnimationSettings>();
+        var spriteAnimations = new List<AsepriteAnimation>();
+        if (animations.Length <= 0)
+            return spriteAnimations;
+        int index = 0;
+        foreach(var animation in animations) {
+            // build out an internal animation object
+            var asset = new AsepriteAnimation() {
+                Name = animation.TagName
+            };
+
+            var importSettings = GetAnimationSettingFor(animSettings, animation);
+            importSettings.About = GetAnimationAbout(animation);
+
+            asset.Frames = new List<AsepriteAnimationFrame>();
+            int length = animation.FrameTo - animation.FrameFrom + 1;
+            int from = (animation.Animation != LoopAnimation.Reverse) ? animation.FrameFrom : animation.FrameTo;
+            int step = (animation.Animation != LoopAnimation.Reverse) ? 1 : -1;
+            int keyIndex = from;
+
+            for (int i = 0; i < length; i++) {
+                if (i >= length) {
+                    keyIndex = from;
+                }
+
+                var frame = new AsepriteAnimationFrame() {
+                    Sprite = sprites[keyIndex],
+                    FrameDuration = file.Frames[keyIndex].FrameDuration / 1000f,
+                };
+
+                keyIndex += step;
+                asset.Frames.Add(frame);
+            }
+
+            switch (animation.Animation) {
+                case LoopAnimation.Forward:
+                    asset.Method = AnimationType.Looped;
+                    importSettings.IsLooped = true;
+                    break;
+                case LoopAnimation.PingPong:
+                    asset.Method = AnimationType.PingPong;
+                    importSettings.IsLooped = true;
+                    break;
+                default:
+                    asset.Method = AnimationType.Single;
+                    importSettings.IsLooped = false;
+                    break;
+            }
+
+            if (animation.TagColor == Color.White.ToAseprite()) {
+                asset.Method = AnimationType.Single;
+                importSettings.IsLooped = false;
+            }
+            index++;
+            spriteAnimations.Add(asset);
+            // store it in the asefile descriptor
+        }
+        return spriteAnimations;
+    }
+
+    private static AsepriteAnimationSettings GetAnimationSettingFor(List<AsepriteAnimationSettings> animationSettings, FrameTag animation) {
+        if (animationSettings == null)
+            animationSettings = new List<AsepriteAnimationSettings>();
+
+        for (int i = 0; i < animationSettings.Count; i++) {
+            if (animationSettings[i].AnimationName == animation.TagName)
+                return animationSettings[i];
+        }
+
+        animationSettings.Add(new AsepriteAnimationSettings(animation.TagName));
+        return animationSettings[animationSettings.Count - 1];
+    }
+
+    private static string GetAnimationAbout(FrameTag animation) {
+        var sb = new StringBuilder();
+        sb.AppendFormat("Animation Type:\t{0}", animation.Animation.ToString());
+        sb.AppendLine();
+        sb.AppendFormat("Animation:\tFrom: {0}; To: {1}", animation.FrameFrom, animation.FrameTo);
+
+        return sb.ToString();
     }
 
     // step and replace all mask instances to clear

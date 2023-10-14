@@ -15,6 +15,7 @@ public class BootstrappedGame : TroublecatGame {
     private readonly List<GameScene> AllScenes = new() {
         new FaceScene(),
         new TextScene(),
+        new SpriteScene(),
     };
 
 

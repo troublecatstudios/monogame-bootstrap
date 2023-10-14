@@ -1,7 +1,7 @@
 {
   "$type": "Troublecat.Core.Assets.Sprites.AsepriteAsset, Troublecat",
-  "Name": "Sprites/Character-Test",
-  "AtlasTexturePath": "Sprites/Character-Test",
+  "Name": "Sprites/test-face",
+  "AtlasTexturePath": "Sprites/test-face",
   "SecondaryTexturePaths": {
     "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib"
   },
@@ -10,13 +10,13 @@
     "$values": [
       {
         "$type": "Troublecat.Core.Assets.Sprites.Sprite, Troublecat",
-        "TextureName": "Sprites\\Character-Test",
+        "TextureName": "Sprites\\test-face",
         "Rectangle": {
           "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
           "X": 0.0,
           "Y": 0.0,
-          "Width": 8.0,
-          "Height": 8.0
+          "Width": 64.0,
+          "Height": 64.0
         },
         "Pivot": {
           "$type": "System.Numerics.Vector2, System.Private.CoreLib",
@@ -30,33 +30,8 @@
           "Z": 0.0,
           "W": 0.0
         },
-        "Name": "Sprites\\Character-Test_0",
+        "Name": "Sprites\\test-face_0",
         "FrameIndex": 0
-      },
-      {
-        "$type": "Troublecat.Core.Assets.Sprites.Sprite, Troublecat",
-        "TextureName": "Sprites\\Character-Test",
-        "Rectangle": {
-          "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
-          "X": 8.0,
-          "Y": 0.0,
-          "Width": 8.0,
-          "Height": 8.0
-        },
-        "Pivot": {
-          "$type": "System.Numerics.Vector2, System.Private.CoreLib",
-          "X": 0.0,
-          "Y": 0.0
-        },
-        "Border": {
-          "$type": "System.Numerics.Vector4, System.Private.CoreLib",
-          "X": 0.0,
-          "Y": 0.0,
-          "Z": 0.0,
-          "W": 0.0
-        },
-        "Name": "Sprites\\Character-Test_1",
-        "FrameIndex": 1
       }
     ]
   },

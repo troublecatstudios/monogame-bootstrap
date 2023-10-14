@@ -1,17 +1,16 @@
 {
-  "$type": "Troublecat.Core.Assets.AsepriteDescriptor, TroublecatPipeline",
-  "Name": "",
-  "AnimationCount": 0,
-  "FrameCount": 2,
-  "AtlasTexturePath": "D:\\Src\\troublecat\\monogame-bootstrap\\packed\\Sprites\\Pack-Test.aseprite_atlas.png",
+  "$type": "Troublecat.Core.Assets.Sprites.AsepriteAsset, Troublecat",
+  "Name": "Sprites/Pack-Test",
+  "AtlasTexturePath": "Sprites/Pack-Test",
   "SecondaryTexturePaths": {
     "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib"
   },
-  "Entries": {
-    "$type": "System.Collections.Generic.List`1[[Troublecat.Core.Assets.AsepriteAtlasEntry, TroublecatPipeline]], System.Private.CoreLib",
+  "Sprites": {
+    "$type": "System.Collections.Generic.List`1[[Troublecat.Core.Assets.Sprites.Sprite, Troublecat]], System.Private.CoreLib",
     "$values": [
       {
-        "$type": "Troublecat.Core.Assets.AsepriteAtlasEntry, TroublecatPipeline",
+        "$type": "Troublecat.Core.Assets.Sprites.Sprite, Troublecat",
+        "TextureName": "Sprites\\Pack-Test",
         "Rectangle": {
           "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
           "X": 0.0,
@@ -31,11 +30,12 @@
           "Z": 0.0,
           "W": 0.0
         },
-        "Name": "Pack-Test.aseprite_0",
+        "Name": "Sprites\\Pack-Test_0",
         "FrameIndex": 0
       },
       {
-        "$type": "Troublecat.Core.Assets.AsepriteAtlasEntry, TroublecatPipeline",
+        "$type": "Troublecat.Core.Assets.Sprites.Sprite, Troublecat",
+        "TextureName": "Sprites\\Pack-Test",
         "Rectangle": {
           "$type": "Troublecat.Core.Geometry.Rectangle, Troublecat",
           "X": 4.0,
@@ -55,13 +55,17 @@
           "Z": 0.0,
           "W": 0.0
         },
-        "Name": "Pack-Test.aseprite_1",
-        "FrameIndex": 0
+        "Name": "Sprites\\Pack-Test_1",
+        "FrameIndex": 1
       }
     ]
   },
+  "Animations": {
+    "$type": "System.Collections.Generic.List`1[[Troublecat.Core.Assets.Sprites.AsepriteAnimation, Troublecat]], System.Private.CoreLib",
+    "$values": []
+  },
   "Metadata": {
-    "$type": "System.Collections.Generic.List`1[[Troublecat.Core.Assets.AsepriteFileMetadata, TroublecatPipeline]], System.Private.CoreLib",
+    "$type": "System.Collections.Generic.List`1[[Troublecat.Core.Assets.Sprites.AsepriteFileMetadata, Troublecat]], System.Private.CoreLib",
     "$values": []
   }
 }

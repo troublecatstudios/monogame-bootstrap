@@ -13,6 +13,7 @@ using Troublecat.Math;
 using Troublecat.Core.Assets.Fonts;
 using Troublecat.Core;
 using GameBootstrap.Components;
+using Troublecat.Core.Assets.Sprites;
 
 
 namespace GameBootstrap;
@@ -107,6 +108,11 @@ public class GameScene {
                     intersection.Width,
                     intersection.Height), Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0);
         }
+    }
+
+    protected void DrawSprite(SpriteBatch spriteBatch, Sprite sprite, Vector2 position, Vector2 scale, Color color, float roation = 0f) {
+        var xnaTexture = _dataLoader.GetAsset<Texture2D>(sprite.TextureName);
+        spriteBatch.Draw(xnaTexture, position, sprite.Rectangle, Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0);
     }
 
     protected void DrawInternalTexture(SpriteBatch spriteBatch, InternalTexture texture, Vector2 pos, Vector2 scale, Color color, float rotation = 0f) {

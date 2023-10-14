@@ -9,7 +9,8 @@
         },
         "Sprites": {
             "Ode-32": {
-                "ImportStyle": "TypicalGrid"
+                "ImportStyle": "TypicalGrid",
+                "EnablePaletteMap": true
             }
         }
     },

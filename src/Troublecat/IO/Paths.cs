@@ -24,6 +24,13 @@ public static class Paths {
             .Replace('/', Path.DirectorySeparatorChar);
     }
 
+    public static string PathToKey(string path) {
+        path = GetPath(path);
+        path = GetPathWithoutExtension(path);
+        var segments = path.Split(Path.DirectorySeparatorChar);
+        return $"{segments[^2]}/{segments[^1]}";
+    }
+
     /// <summary>
     /// Gets the rooted path from a relative one
     /// </summary>

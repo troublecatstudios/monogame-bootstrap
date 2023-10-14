@@ -54,17 +54,17 @@ public class Metadata {
         // Check if it's a shortcut for some common secondary textures
         if (layerName.Equals("@emission", StringComparison.OrdinalIgnoreCase)) {
             Type = MetadataType.SecondaryTexture;
-            Args.Add("_Emission");
+            Args.Add("Emission");
             return;
         }
         if (layerName.Equals("@normal", StringComparison.OrdinalIgnoreCase)) {
             Type = MetadataType.SecondaryTexture;
-            Args.Add("_NormalMap");
+            Args.Add("NormalMap");
             return;
         }
         if (layerName.Equals("@mask", StringComparison.OrdinalIgnoreCase)) {
             Type = MetadataType.SecondaryTexture;
-            Args.Add("_MaskTex");
+            Args.Add("MaskTex");
             return;
         }
 
