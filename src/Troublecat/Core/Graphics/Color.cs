@@ -56,15 +56,22 @@ public struct Color : IEquatable<Color>
     public static Color CreateFrom256(int r, int g, int b) =>
         new Color(r / 256f, g / 256f, b / 256f, 1f);
 
+    // https://github.com/MonoGame/MonoGame/blob/develop/MonoGame.Framework/Color.cs#L1784
     public static implicit operator Color(Microsoft.Xna.Framework.Color c) => new(c.R / MaxColorValue, c.G / MaxColorValue, c.B / MaxColorValue, c.A / MaxColorValue);
+    // https://github.com/MonoGame/MonoGame/blob/develop/MonoGame.Framework/Color.cs#L246
+    public static implicit operator Microsoft.Xna.Framework.Color(Color c) => new(c.R, c.G, c.B, c.A);
+
+
     public static implicit operator Color(System.Numerics.Vector4 c) => new(c.X, c.Y, c.Z, c.W);
-    public static implicit operator Microsoft.Xna.Framework.Color(Color c) => new(c.R * MaxColorValue, c.G * MaxColorValue, c.B * MaxColorValue, c.A * MaxColorValue);
+
     public static implicit operator SKColor(Color c) => new((byte)(c.R * MaxColorValue), (byte)(c.G * MaxColorValue), (byte)(c.B * MaxColorValue), (byte)(c.A * MaxColorValue));
+
+    // https://learn.microsoft.com/en-us/dotnet/api/system.drawing.color.fromargb?view=net-7.0
     public static implicit operator System.Drawing.Color(Color c) => System.Drawing.Color.FromArgb(
+        Maths.FloorToInt(c.A * MaxColorValue),
         Maths.FloorToInt(c.R * MaxColorValue),
         Maths.FloorToInt(c.G * MaxColorValue),
-        Maths.FloorToInt(c.B * MaxColorValue),
-        Maths.FloorToInt(c.A * MaxColorValue));
+        Maths.FloorToInt(c.B * MaxColorValue));
 
     //public static Color operator *(Color c, float factor) => new(c.R * factor, c.G * factor, c.B * factor, c.A * factor);
 
