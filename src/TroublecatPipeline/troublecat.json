@@ -10,7 +10,11 @@
         "Sprites": {
             "Ode-32": {
                 "ImportStyle": "TypicalGrid",
-                "EnablePaletteMap": true
+                "EnablePaletteMap": true,
+                "SpritePivot": {
+                    "X": 0.5,
+                    "Y": 1
+                }
             }
         }
     },
