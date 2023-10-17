@@ -8,6 +8,7 @@ using Troublecat.Core.Graphics;
 using Troublecat.Data;
 using Troublecat.Input;
 using Troublecat.Math;
+using Troublecat.Reanimator;
 using Troublecat.Utilities;
 
 namespace GameBootstrap.Scenes;
@@ -19,6 +20,12 @@ public class SpriteScene : GameScene {
     private AsepriteAnimation? _currentAnimation;
     private SpriteAnimator _animator = new();
     private float _playbackSpeed = 1f;
+
+    private int _animationIndex = 0;
+    private string[] _animations = new string[] {
+        "idle",
+        "run",
+    };
 
     private PixelFont _debugFont;
 
@@ -33,18 +40,44 @@ public class SpriteScene : GameScene {
         }
     }
 
+    private void SetAnimation(string name) {
+        if (_playerSprites.TryGetAnimation(name, out var animation)) {
+            _currentAnimation = animation!;
+            _animator.SetAnimation(_currentAnimation);
+        }
+    }
+
     public override void Update(Timing time) {
         base.Update(time);
         _inputManager.Update(time);
-        if (_inputManager.IsButtonDown(Keys.OemComma)) {
-            _playbackSpeed -= 0.1f;
+
+        if (_inputManager.IsButtonDown(Keys.OemComma) || _inputManager.IsButtonDown(Keys.OemPeriod)) {
+            if (_inputManager.IsButtonDown(Keys.OemComma)) {
+                _playbackSpeed -= 0.1f;
+            }
+
+            if (_inputManager.IsButtonDown(Keys.OemPeriod)) {
+                _playbackSpeed += 0.1f;
+            }
+            _animator.SetPlayback(_playbackSpeed);
         }
 
-        if (_inputManager.IsButtonDown(Keys.OemPeriod)) {
-            _playbackSpeed += 0.1f;
+
+        if (_inputManager.IsButtonDown(Keys.A)) {
+            _animationIndex--;
+            if (_animationIndex < 0) {
+                _animationIndex = _animations.Length - 1;
+            }
+            SetAnimation(_animations[_animationIndex]);
         }
-        _playbackSpeed = Maths.Clamp(_playbackSpeed, 0.1f, 5f);
-        _animator.SetPlayback(_playbackSpeed);
+
+        if (_inputManager.IsButtonDown(Keys.D)) {
+            _animationIndex++;
+            if (_animationIndex >= _animations.Length) {
+                _animationIndex = 0;
+            }
+            SetAnimation(_animations[_animationIndex]);
+        }
     }
 
     public override void Draw(SpriteBatch spriteBatch) {
