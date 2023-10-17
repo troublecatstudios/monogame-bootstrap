@@ -16,6 +16,7 @@ public class BootstrappedGame : TroublecatGame {
         new FaceScene(),
         new TextScene(),
         new SpriteScene(),
+        new PrimitiveScene(),
     };
 
 
