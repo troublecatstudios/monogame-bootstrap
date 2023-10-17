@@ -45,6 +45,7 @@ public class SpriteAnimator : IUpdateableComponent {
         _frameTime += time.Delta;
         var frameDuration = _animation.Frames[_frameIndex].FrameDuration * _playbackSpeed;
         if (_frameTime >= frameDuration) {
+            _frameTime = 0f;
             _frameIndex += _direction;
         }
         if (_frameIndex < 0) {
@@ -60,7 +61,8 @@ public class SpriteAnimator : IUpdateableComponent {
                 return;
             }
             if (_animation.Method == AnimationType.Looped) {
-                Reset();
+                _frameTime = 0f;
+                _frameIndex = 0;
             }
         }
     }
